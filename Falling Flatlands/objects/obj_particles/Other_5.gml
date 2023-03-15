@@ -1,0 +1,1 @@
+part_particles_clear(particle_system);

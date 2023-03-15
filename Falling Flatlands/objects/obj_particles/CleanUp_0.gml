@@ -1,0 +1,6 @@
+part_system_destroy(particle_system);
+
+part_type_destroy(part_type_ship_exhaust);
+part_type_destroy(part_type_enemy_exhaust);
+part_type_destroy(part_type_ship_debris);
+part_type_destroy(part_type_asteroid_debris);
