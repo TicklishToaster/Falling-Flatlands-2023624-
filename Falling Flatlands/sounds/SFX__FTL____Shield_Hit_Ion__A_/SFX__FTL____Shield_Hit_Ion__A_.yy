@@ -15,9 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx__ftl____shield_hit_ion__a_.wav",
-  "duration": 0.0,
+  "duration": 2.468583,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "FTL",
+    "path": "folders/Sounds/FTL.yy",
   },
 }

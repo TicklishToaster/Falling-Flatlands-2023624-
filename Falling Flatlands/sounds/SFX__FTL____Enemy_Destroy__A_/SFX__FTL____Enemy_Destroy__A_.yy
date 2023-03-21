@@ -17,7 +17,7 @@
   "soundFile": "sfx__ftl____enemy_destroy__a_.wav",
   "duration": 5.661333,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "FTL",
+    "path": "folders/Sounds/FTL.yy",
   },
 }

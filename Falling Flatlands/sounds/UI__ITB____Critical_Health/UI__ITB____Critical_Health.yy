@@ -17,7 +17,7 @@
   "soundFile": "ui__itb____critical_health.wav",
   "duration": 1.134667,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "ITB",
+    "path": "folders/Sounds/ITB.yy",
   },
 }

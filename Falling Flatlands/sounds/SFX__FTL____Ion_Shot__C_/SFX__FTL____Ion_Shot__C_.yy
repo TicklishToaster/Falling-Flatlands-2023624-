@@ -17,7 +17,7 @@
   "soundFile": "sfx__ftl____ion_shot__c_.wav",
   "duration": 0.0,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "FTL",
+    "path": "folders/Sounds/FTL.yy",
   },
 }

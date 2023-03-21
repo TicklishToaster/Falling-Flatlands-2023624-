@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "UI__FTL____Upgrade",
+  "name": "SFX__ITB____Shield_Down",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,10 +14,10 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "ui__ftl____upgrade.wav",
-  "duration": 0.0,
+  "soundFile": "SFX__ITB____Shield_Down.wav",
+  "duration": 1.034375,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "ITB",
+    "path": "folders/Sounds/ITB.yy",
   },
 }

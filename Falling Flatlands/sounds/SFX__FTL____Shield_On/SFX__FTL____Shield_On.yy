@@ -17,7 +17,7 @@
   "soundFile": "sfx__ftl____shield_on.wav",
   "duration": 1.522375,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "FTL",
+    "path": "folders/Sounds/FTL.yy",
   },
 }

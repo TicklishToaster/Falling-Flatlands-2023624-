@@ -17,7 +17,7 @@
   "soundFile": "SFX__FTL____Select_Down_.wav",
   "duration": 0.116803,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "FTL",
+    "path": "folders/Sounds/FTL.yy",
   },
 }

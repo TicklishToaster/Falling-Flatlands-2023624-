@@ -17,7 +17,7 @@
   "soundFile": "sfx__ftl____shield_hit_impact__a_.wav",
   "duration": 0.898333,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "FTL",
+    "path": "folders/Sounds/FTL.yy",
   },
 }

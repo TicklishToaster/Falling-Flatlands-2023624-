@@ -17,7 +17,7 @@
   "soundFile": "sfx__ftl____energy_shot_light__b_.wav",
   "duration": 0.297521,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "FTL",
+    "path": "folders/Sounds/FTL.yy",
   },
 }

@@ -17,7 +17,7 @@
   "soundFile": "sfx__ftl____energy_shot_heavy__c_.wav",
   "duration": 1.206,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "FTL",
+    "path": "folders/Sounds/FTL.yy",
   },
 }

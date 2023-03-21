@@ -17,7 +17,7 @@
   "soundFile": "sfx__itb____ship_damage.wav",
   "duration": 1.067729,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "ITB",
+    "path": "folders/Sounds/ITB.yy",
   },
 }

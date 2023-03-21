@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "SFX__ITB__Shield_Down",
+  "name": "SFX__ITB____Artemis_Charge_Pulse__C_",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,10 +14,10 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx__itb__shield_down.wav",
-  "duration": 1.034375,
+  "soundFile": "SFX__ITB____Artemis_Charge_Pulse__C_.wav",
+  "duration": 1.395271,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "ITB",
+    "path": "folders/Sounds/ITB.yy",
   },
 }
