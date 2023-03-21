@@ -28,7 +28,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"062d04ed-9c4b-48ab-b140-7cc57106733f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b5907c5-cbc8-4b41-84a9-d4b4dc127a6f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5729e3ca-2eb0-4697-868f-c832e7b6fe3e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8f06aeef-5460-40bc-b37a-03c3bcf5d314",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -40,12 +42,14 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"dabdb51c-e5db-4e34-b23c-7cab84502551","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"062d04ed-9c4b-48ab-b140-7cc57106733f","path":"sprites/spr_enemy_sentry_gun/spr_enemy_sentry_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7ac09775-6031-4bf6-83fc-45665e514ffb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b5907c5-cbc8-4b41-84a9-d4b4dc127a6f","path":"sprites/spr_enemy_sentry_gun/spr_enemy_sentry_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d79b396b-af5a-4c5d-91f2-edb93fe92569","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5729e3ca-2eb0-4697-868f-c832e7b6fe3e","path":"sprites/spr_enemy_sentry_gun/spr_enemy_sentry_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"dce2364f-2112-41ae-a73d-0b9024d2b384","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8f06aeef-5460-40bc-b37a-03c3bcf5d314","path":"sprites/spr_enemy_sentry_gun/spr_enemy_sentry_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -64,7 +68,7 @@
     "eventStubScript": null,
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0fb22501-2324-4a9a-b523-f0901324774e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"500686be-ceee-4d04-a0af-8029e9665872","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {

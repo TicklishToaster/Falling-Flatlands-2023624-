@@ -71,6 +71,6 @@
   "nineSlice": null,
   "parent": {
     "name": "OLD",
-    "path": "folders/Sprites/HUD/OLD.yy",
+    "path": "folders/Sprites/OLD/OLD.yy",
   },
 }

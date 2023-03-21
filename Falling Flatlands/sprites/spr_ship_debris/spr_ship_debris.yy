@@ -77,6 +77,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Miscellaneous OLD",
-    "path": "folders/Sprites/Miscellaneous OLD.yy",
+    "path": "folders/Sprites/OLD/Miscellaneous OLD.yy",
   },
 }

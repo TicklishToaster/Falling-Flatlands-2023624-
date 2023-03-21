@@ -100,7 +100,7 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Sprites/Enemies.yy",
+    "name": "Enemies OLD",
+    "path": "folders/Sprites/OLD/Enemies OLD.yy",
   },
 }
