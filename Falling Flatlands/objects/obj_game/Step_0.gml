@@ -23,6 +23,16 @@ if room == rm_game{
 }
 
 
+//if (keyboard_check_pressed(ord("1"))) {
+//	instance_create_layer(x, y, "Instances", obj_ship_squire);
+//	//obj_camera.target = obj_ship_squire;
+//}
+//if (keyboard_check_pressed(ord("2"))) {
+//	instance_create_layer(x, y, "Instances", obj_ship_goliath);
+//	//obj_camera.target = obj_ship_goliath;
+//}
+
+
 if (keyboard_check_pressed(vk_escape)) {
 	game_end();
 }

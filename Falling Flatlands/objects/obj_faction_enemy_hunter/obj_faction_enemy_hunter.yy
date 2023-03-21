@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_faction_ally",
+  "name": "obj_faction_enemy_hunter",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_faction",
-    "path": "objects/obj_faction/obj_faction.yy",
+    "name": "obj_faction_enemy",
+    "path": "objects/obj_faction_enemy/obj_faction_enemy.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,12 +25,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Ally",
-    "path": "folders/Objects/OLD/Ally.yy",
+    "name": "Faction Enemy",
+    "path": "folders/Objects/Faction Enemy.yy",
   },
 }

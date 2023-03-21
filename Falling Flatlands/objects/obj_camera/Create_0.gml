@@ -2,10 +2,14 @@
 view_enabled = true;
 view_visible[0] = true;
 
+
 // Camera Vars ////////////////////////////////////////////////////////////////
-target = factions.player;
-camera_x = room_width/2;
-camera_y = room_height/2;
+//target = factions.player;
+//camera_x = room_width/2;
+//camera_y = room_height/2;
+target = noone;
+camera_x = 0;
+camera_y = 0;
 
 //camera_width = 1920;
 //camera_height = 1080;

@@ -32,6 +32,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Miscellaneous",
-    "path": "folders/Objects/Miscellaneous.yy",
+    "path": "folders/Objects/OLD/Miscellaneous.yy",
   },
 }

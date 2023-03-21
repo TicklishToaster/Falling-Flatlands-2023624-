@@ -12,3 +12,7 @@ for (var i = 0; i < array_length(collision_detection_data); i += 1) {
 	}
 }
 
+
+
+//speed = speed * global.time_modifier;
+

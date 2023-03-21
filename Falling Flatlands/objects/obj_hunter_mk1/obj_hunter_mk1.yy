@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_hunter",
+  "name": "obj_hunter_mk1",
   "spriteId": {
     "name": "spr_enemy_hunter",
     "path": "sprites/spr_enemy_hunter/spr_enemy_hunter.yy",
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_par_enemy",
-    "path": "objects/obj_par_enemy/obj_par_enemy.yy",
+    "name": "obj_faction_enemy_hunter",
+    "path": "objects/obj_faction_enemy_hunter/obj_faction_enemy_hunter.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,12 +28,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Objects/Enemy.yy",
+    "name": "Faction Enemy",
+    "path": "folders/Objects/Faction Enemy.yy",
   },
 }

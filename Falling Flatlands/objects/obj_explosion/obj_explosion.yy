@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_explosion",
   "spriteId": {
-    "name": "spr_explosion_effect_gray",
-    "path": "sprites/spr_explosion_effect_gray/spr_explosion_effect_gray.yy",
+    "name": "spr_explosion_effect_grey",
+    "path": "sprites/spr_explosion_effect_grey/spr_explosion_effect_grey.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,7 +32,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Miscellaneous",
-    "path": "folders/Objects/Miscellaneous.yy",
+    "name": "Miscellaneous Objects",
+    "path": "folders/Objects/Miscellaneous Objects.yy",
   },
 }

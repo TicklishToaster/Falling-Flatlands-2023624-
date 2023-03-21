@@ -4,31 +4,30 @@ event_inherited();
 
 // Enemy Attributes ///////////////////////////////////////////////////////////
 // Health
-health_points_max	= 6;
+health_points_max	= 1;
 health_points		= health_points_max;
 
 // Movement
-max_speed			= 0;
-acceleration		= 0.05;
-rotation_speed		= 0.5;
-knockback_modifier	= 0;
-
+max_speed			= 2;	//2
+acceleration		= 0.04; //0.05
+rotation_speed		= 0.8;	//1
+knockback_modifier	= 1;	//1
+proximity_radius	= 96;
 exhaust_counter		= 0;
 
 // Combat
 attack_cooldown				= true;
-attack_cooldown_timer_max	= 3.0;
+attack_cooldown_timer_max	= 2.0;
 attack_cooldown_timer		= attack_cooldown_timer_max;
-engagement_range			= 350;
-gun_angle					= irandom_range(0, 359);
+engagement_range			= 280;
 
 // Bullet Data
-projectile_hp		= 3;
+projectile_hp		= 1;
 projectile_damage	= 1;
 projectile_speed	= 5;
-projectile_knockback= 2;
+projectile_knockback= 0.5;
 
-projectile_sprite_id		= spr_laser_bullet_large_red;
+projectile_sprite_id		= spr_laser_bullet_small_red;
 projectile_sprite_speed		= (room_speed / 60 / 5);
 projectile_sprite_colour	= c_white;
 
@@ -37,4 +36,4 @@ projectile_explosion_sprite_speed	= (room_speed / 60 / 5);
 projectile_explosion_sprite_colour	= c_red;
 
 // Other Data
-destroy_score = 50;
+destroy_score = 10;

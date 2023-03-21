@@ -1,14 +1,17 @@
+// Inherit the parent event
+event_inherited();
+
 // If player is in range.
-if point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement_range {
+if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement_range) {
 	// Determine the angle required to face the target ship.
-	var new_angle = point_direction(x, y, obj_ship_squire.x, obj_ship_squire.y);
+	var new_angle = point_direction(x, y, obj_faction_player.x, obj_faction_player.y);
 	
 	// Calculate the closest angle required to face the target (clock-wise or anti clock-wise).
 	new_angle = angle_difference(new_angle, gun_angle);
 	
 	// Rotate ship gun toward new angle at set turn speed.
 	gun_angle += clamp(new_angle, -rotation_speed, rotation_speed);
-		
+	
 	// Fire Projectile
 	if (abs(new_angle) < 15 && attack_cooldown == false) {
 		// Create projectile and set attributes.	
@@ -44,26 +47,14 @@ if point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement
 	}
 }
 
-// Countdown attack cooldown.
-if (attack_cooldown) {
-	attack_cooldown_timer = clamp(attack_cooldown_timer - (room_speed / 60 / 60), 0, attack_cooldown_timer_max);
-	if (attack_cooldown_timer) <= 0 {
-		attack_cooldown = false;
-		attack_cooldown_timer = attack_cooldown_timer_max;
-	}
-}
-
-// Set sprite frame to equivalent health points.
-image_index = health_points - 1;
-
-if (health_points <= 0){
-	instance_destroy();
-}
-
-
-
-
-
+//// Countdown attack cooldown.
+//if (attack_cooldown) {
+//	attack_cooldown_timer = clamp(attack_cooldown_timer - (room_speed / 60 / 60), 0, attack_cooldown_timer_max);
+//	if (attack_cooldown_timer) <= 0 {
+//		attack_cooldown = false;
+//		attack_cooldown_timer = attack_cooldown_timer_max;
+//	}
+//}
 
 
 

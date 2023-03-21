@@ -30,6 +30,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ally",
-    "path": "folders/Objects/Ally.yy",
+    "path": "folders/Objects/OLD/Ally.yy",
   },
 }

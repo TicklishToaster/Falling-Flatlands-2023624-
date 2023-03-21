@@ -9,8 +9,8 @@ if (sprite_index != noone) {
 		if (!position_meeting(x + lengthdir_x(i, impact_direction), y + lengthdir_y(i, impact_direction), self) == true) {			
 			// Create new collision entry and fill it blank.
 			var collision_entry = array_create(8, noone);
-						
-			// Set the x/y coordinate of the collision edge.			
+			
+			// Set the x/y coordinate of the collision edge.
 			collision_entry[0] = x + lengthdir_x(i, impact_direction);
 			collision_entry[1] = y + lengthdir_y(i, impact_direction);
 			
@@ -27,7 +27,7 @@ if (sprite_index != noone) {
 			collision_entry[5] = 5;
 			
 			//// Set a timer value to be used for various functions.
-			//collision_entry[6] = false;
+			//collision_entry[6] = false;			
 			
 			// Append the new collision data to the array.
 			array_push(collision_detection_data, collision_entry);

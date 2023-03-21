@@ -29,6 +29,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Neutral",
-    "path": "folders/Objects/Neutral.yy",
+    "path": "folders/Objects/OLD/Neutral.yy",
   },
 }
