@@ -52,10 +52,16 @@ if (input_up_hold) {
 	exhaust_counter++;
 	if(exhaust_counter >= 4){
 		exhaust_counter = 0;
+		var n1 = 0.15;
 		var xx = x - lengthdir_x(sprite_height*0.2, image_angle);
 		var yy = y - lengthdir_y(sprite_height*0.2, image_angle);
+		var xx2 = x - lengthdir_x(sprite_height*n1, image_angle);
+		var yy2 = y - lengthdir_y(sprite_height*n1, image_angle);
 		with(obj_particles){
-			part_particles_create(particle_system, xx, yy, part_type_ship_exhaust, 1);
+			var n = 15;
+			part_particles_create(particle_system, xx, yy+00, part_type_ship_exhaust_large, 1);
+			part_particles_create(particle_system, xx2+lengthdir_x(n, other.image_angle+90), yy2+lengthdir_y(n, other.image_angle+90), part_type_ship_exhaust_large, 1);
+			part_particles_create(particle_system, xx2-lengthdir_x(n, other.image_angle+90), yy2-lengthdir_y(n, other.image_angle+90), part_type_ship_exhaust_large, 1);
 		}
 	}
 }
@@ -115,18 +121,15 @@ if (input_space_hold) {
 			sprite_index			= projectile_sprite_id;
 			speed					= projectile_speed;
 			direction				= projectile_direction;
-			depth					= other.depth + 1;
+			depth					= other.depth - 1;
 		}
 
 		// Play shoot audio.
-		audio_play_sound(choose(
-		SFX__FTL____Energy_Shot_Light__A_,
-		SFX__FTL____Energy_Shot_Light__B_,
-		SFX__FTL____Energy_Shot_Light__C_), 
-		10, false);
+		audio_play_sound(SFX__FTL____Energy_Shot_Super__A_,	10, false);
 		
+		// Toggle Camera Shake
+		obj_camera.camera_shake = 1;
 		
-	
 		// Enable attack cooldown.
 		attack_cooldown = true;
 	}

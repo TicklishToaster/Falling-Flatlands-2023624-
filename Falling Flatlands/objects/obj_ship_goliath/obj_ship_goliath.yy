@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_ship_squire",
+  "name": "obj_ship_goliath",
   "spriteId": {
-    "name": "spr_ship_squire",
-    "path": "sprites/spr_ship_squire/spr_ship_squire.yy",
+    "name": "spr_ship_goliath",
+    "path": "sprites/spr_ship_goliath/spr_ship_goliath.yy",
   },
   "solid": false,
   "visible": true,

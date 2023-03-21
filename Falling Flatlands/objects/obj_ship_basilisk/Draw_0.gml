@@ -5,7 +5,7 @@ draw_sprite_ext(sprite_index, -1, x, y, 1, 1, image_angle, c_aqua, image_alpha);
 
 // Draw Shield ////////////////////////////////////////////////////////////////
 // Set Shield Sprite.
-var shield_sprite = spr_ship_squire_shield;
+var shield_sprite = spr_ship_basilisk_shield;
 
 // Set Camera Variables.
 var camera_length = camera_get_view_x(view_camera[0])
@@ -22,15 +22,13 @@ if (!surface_exists(shield_surface)) {
 surface_set_target(shield_surface);
 
 // Set shield colour and alpha values.
-//var shield_colour = make_colour_rgb(0, 0, clamp(128 + (255 * shield_points / shield_points_max), 0, 255));
 var shield_colour = make_colour_rgb(0, 0, 196);
 var shield_alpha = 0.8;
 if (shield_enabled) {
-	//shield_colour = make_colour_rgb(0, 0, clamp(128 + (255 * shield_points / shield_points_max), 192, 255));
 	shield_colour = make_colour_rgb(0, 0, 255);
 	shield_alpha = 1.0;
 } else if (!shield_enabled && shield_points < 1) {
-	shield_alpha = 0.0;
+	shield_alpha = 0.2;
 }
 
 // Draw shield sprite (Certain values are multiplied by 4 to reduce anti-aliasing).
@@ -63,3 +61,17 @@ surface_reset_target();
 draw_surface_ext(shield_surface, 
 	x-sprite_get_xoffset(shield_sprite), y-sprite_get_yoffset(shield_sprite),
 	0.25, 0.25, 0, -1, 1);
+
+
+// Draw Rocket Sprite /////////////////////////////////////////////////////////
+if (!attack_cooldown) {
+	draw_sprite_ext(projectile_sprite_id, rocket_type-1, x-lengthdir_x(2, image_angle), y-lengthdir_y(2, image_angle), 1, 1, image_angle, c_aqua, image_alpha);
+}
+
+
+// Draw Target Crosshair //////////////////////////////////////////////////////
+if (instance_exists(projectile_target) && homing_enabled) {
+	draw_sprite_ext(crosshair_target_sprite_id, crosshair_target_sprite_frame, projectile_target.x, projectile_target.y, 1, 1, 0, c_orange, 1);
+}
+
+

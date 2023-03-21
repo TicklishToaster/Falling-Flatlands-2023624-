@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_ship_squire",
+  "name": "obj_ship_basilisk",
   "spriteId": {
-    "name": "spr_ship_squire",
-    "path": "sprites/spr_ship_squire/spr_ship_squire.yy",
+    "name": "spr_ship_basilisk",
+    "path": "sprites/spr_ship_basilisk/spr_ship_basilisk.yy",
   },
   "solid": false,
   "visible": true,
@@ -36,6 +36,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":73,"eventType":8,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_projectile","path":"objects/obj_projectile/obj_projectile.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

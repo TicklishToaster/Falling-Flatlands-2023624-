@@ -5,7 +5,7 @@ draw_sprite_ext(sprite_index, -1, x, y, 1, 1, image_angle, c_aqua, image_alpha);
 
 // Draw Shield ////////////////////////////////////////////////////////////////
 // Set Shield Sprite.
-var shield_sprite = spr_ship_squire_shield;
+var shield_sprite = spr_ship_goliath_shield;
 
 // Set Camera Variables.
 var camera_length = camera_get_view_x(view_camera[0])
@@ -22,15 +22,13 @@ if (!surface_exists(shield_surface)) {
 surface_set_target(shield_surface);
 
 // Set shield colour and alpha values.
-//var shield_colour = make_colour_rgb(0, 0, clamp(128 + (255 * shield_points / shield_points_max), 0, 255));
 var shield_colour = make_colour_rgb(0, 0, 196);
 var shield_alpha = 0.8;
 if (shield_enabled) {
-	//shield_colour = make_colour_rgb(0, 0, clamp(128 + (255 * shield_points / shield_points_max), 192, 255));
 	shield_colour = make_colour_rgb(0, 0, 255);
 	shield_alpha = 1.0;
 } else if (!shield_enabled && shield_points < 1) {
-	shield_alpha = 0.0;
+	shield_alpha = 0.2;
 }
 
 // Draw shield sprite (Certain values are multiplied by 4 to reduce anti-aliasing).
