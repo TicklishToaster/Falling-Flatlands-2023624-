@@ -11,25 +11,69 @@ target = noone;
 camera_x = 0;
 camera_y = 0;
 
+scale_width	 = 640;
+scale_height = 360;
+
 //camera_width = 1920;
 //camera_height = 1080;
-camera_width = 640;
-camera_height = 640;
+//camera_width = 1280;
+//camera_height = 720;
+//camera_width = 640;
+//camera_height = 360;
 camera_shake = 0;
+
+//camera_set_view_size(view_camera[0], camera_width, camera_height);
+//view_set_wport(0, camera_width);
+//view_set_hport(0, camera_height);
+
+
+// Display Vars ///////////////////////////////////////////////////////////////
+display_scale = display_get_width()/scale_width;
+//display_scale = 1920/camera_width;
+
+//display_scale_w = display_get_width()/(camera_width/2);
+//display_scale_h = display_get_height()/(camera_height/2);
+//display_scale = 2;
+
+
+camera_width  = scale_width  * 2;
+camera_height = scale_height * 2;
 
 camera_set_view_size(view_camera[0], camera_width, camera_height);
 view_set_wport(0, camera_width);
 view_set_hport(0, camera_height);
 
 
-// Display Vars ///////////////////////////////////////////////////////////////
-display_scale = 2;
-display_width = camera_width * display_scale;
-display_height = camera_height * display_scale;
+display_width  = scale_width  * display_scale;
+display_height = scale_height * display_scale;
 
 window_set_size(display_width, display_height);
 surface_resize(application_surface, display_width, display_height);
-window_set_fullscreen(false);
+//application_surface_draw_enable(false);
+//window_set_fullscreen(true);
+
+//target = noone;
+//camera_x = 0;
+//camera_y = 0;
+//scale_width	 = 640;
+//scale_height = 360;
+////camera_width = scale_width
+////camera_height = scale_height
+//camera_shake = 0;
+
+//application_surface_draw_enable(false);
+//window_set_fullscreen(true);
+
+//monitor_W = display_get_width();
+//monitor_H = display_get_height();
+////monitor_W = 1280;
+////monitor_H = 720;
+//camera_width  = monitor_W;
+//camera_height = monitor_H;
+//monitor_offset_X = (monitor_W - scale_width)  / 2;
+//monitor_offset_Y = (monitor_H - scale_height) / 2;
+//surface_resize(application_surface, 1600, 900);
+
 
 
 // GUI Vars ///////////////////////////////////////////////////////////////////

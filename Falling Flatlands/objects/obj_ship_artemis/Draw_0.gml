@@ -20,6 +20,20 @@ if (boost_mode || booster_charge_enable) {
 		1, 1, image_angle, blur_colour, image_alpha-0.4);
 }
 
+// Draw charge/boost effects. 
+if (booster_charge_enable && !booster_charge_complete) {	
+	// Particle FX.
+	with(obj_particles){		
+		var charge_dir		= random(360);	// 360
+		var charge_dist		= 64;			// 100
+		var charge_x		= other.x + lengthdir_x(charge_dist, charge_dir);
+		var charge_y		= other.y + lengthdir_y(charge_dist, charge_dir);
+		var charge_part_dir	= point_direction(charge_x, charge_y, other.x, other.y);
+		part_type_direction(	part_type_charge_artemis, charge_part_dir, charge_part_dir, 0, 0);
+		part_type_orientation(	part_type_charge_artemis, charge_part_dir, charge_part_dir, 0, 0, 0);
+		part_particles_create(	particle_system, charge_x, charge_y, part_type_charge_artemis, 1);	
+	}
+}
 
 // Draw Ship Hull /////////////////////////////////////////////////////////////
 draw_sprite_ext(sprite_index, -1, x, y, 1, 1, image_angle, blur_colour, image_alpha);
@@ -31,10 +45,10 @@ draw_sprite_ext(sprite_index, -1, x, y, 1, 1, image_angle, blur_colour, image_al
 //}
 
 
-// Draw Grapple Line //////////////////////////////////////////////////////////
-if (grapple_mode && instance_exists(grapple_target)) {
-	draw_line_width(x, y, grapple_target.x, grapple_target.y, 1);
-}
+//// Draw Grapple Line //////////////////////////////////////////////////////////
+//if (grapple_mode && instance_exists(grapple_target)) {
+//	draw_line_width(x, y, grapple_target.x, grapple_target.y, 1);
+//}
 
 
 //// Draw grapple line.

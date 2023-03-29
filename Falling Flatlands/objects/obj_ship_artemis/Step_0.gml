@@ -92,7 +92,7 @@ if (!boost_mode) {
 	}
 	
 	
-	// Charge Boost Mode
+	// Enable boost charge.
 	if (input_shift_hold) {
 		if (!booster_charge_enable) {
 			booster_charge_enable = true;
@@ -102,7 +102,7 @@ if (!boost_mode) {
 		}
 	
 		// Countdown booster charge.
-		if (booster_charge_enable) {
+		if (booster_charge_enable && !booster_charge_complete) {
 			booster_charge_timer = clamp(booster_charge_timer + (room_speed / 60 / 60), 0, booster_charge_timer_max);
 			
 			// Toggle booster charge as complete.
@@ -111,20 +111,21 @@ if (!boost_mode) {
 				
 				// Play audio clip for completing charge.
 				audio_play_sound(SFX__ITB____Artemis_Charge_Pulse__D_, 10, false, 0.5);				
-			}
+			}		
 		}
 	}
 	
-	// Charge Boost Mode
+	// Cancel boost charge.
 	if (!input_shift_hold) {
-		if (booster_charge_enable && booster_charge_timer < booster_charge_timer_max/4) {
-			booster_charge_enable = false;
-			
+		if (booster_charge_enable && booster_charge_timer < booster_charge_timer_max/4) {			
 			booster_charge_timer = clamp(booster_charge_timer - (room_speed / 60 / 60), 0, booster_charge_timer_max);
+			if (booster_charge_timer <= 0) {
+				booster_charge_enable = false;
+			}
 		}
 	}	
 	
-	// Enable Boost Mode
+	// Release boost charge.
 	if (input_shift_release) {
 		// If the booster charge timer is above the minimum threshold.
 		if (booster_charge_enable && booster_charge_timer >= booster_charge_timer_max/4) {
@@ -161,7 +162,7 @@ if (boost_mode) {
 
 	// Set booster charge timer to a value proportional to the current ship speed.
 	// This value is intended to decrease over time as the boost wears off and the ship slows down.
-	booster_charge_timer = clamp((speed - max_speed_default)/2, 0, booster_charge_timer_max);
+	booster_charge_timer = clamp((speed - max_speed_default)/(max_speed_default/2), 0, booster_charge_timer_max);
 	
 	if (!grapple_mode) {
 		// Gradually decelerate ship during boost mode.

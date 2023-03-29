@@ -1,2 +1,2 @@
-/// @description Restart Room
-room_restart();
+///// @description Restart Room
+//room_restart();

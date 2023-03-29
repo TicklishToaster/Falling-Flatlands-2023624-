@@ -26,7 +26,7 @@ iframes_timer		= iframes_timer_max;
 iframes_blink		= 0;
 
 // Movement
-max_speed_current		= 5;
+max_speed_current		= 10;	// 6
 max_speed_default		= max_speed_current;
 max_speed_boosted		= max_speed_current*2;
 
@@ -39,11 +39,14 @@ rotation_speed_boosted	= rotation_speed_current/(rotation_speed_current*2);
 knockback_modifier		= 1;	// 1
 exhaust_counter			= 0;
 
+// Charge
 boost_mode			= false;
 booster_charge_enable	= false;
 booster_charge_complete	= false;
 booster_charge_timer_max= 2.0;
 booster_charge_timer	= 0;
+charge_surface = -1;
+
 
 // Combat
 attack_cooldown				= false;

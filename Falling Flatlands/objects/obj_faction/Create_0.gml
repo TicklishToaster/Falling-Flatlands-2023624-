@@ -3,7 +3,6 @@ faction = factions.neutral;
 last_collider = noone;
 
 
-collision_detection_data = [];
 /*
 This array should be given to every object instance that is capable of colliding with other objects.
 It requires both colliding parties to have a sprite. 
@@ -19,3 +18,4 @@ they stay locked to the appropriate position based on when the collision first t
 This array does not delete it's data entries, so objects that exist for too long could potentially hinder
 the game speed.
 */
+collision_detection_data = [];

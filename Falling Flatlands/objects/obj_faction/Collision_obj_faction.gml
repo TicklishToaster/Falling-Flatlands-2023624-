@@ -1,5 +1,15 @@
+// If current object is not onscreen then exit this event and nullify the potentially expensive processes below.
+if (!point_in_rectangle(x, y, 
+	obj_camera.x - obj_camera.camera_width  / 10, 
+	obj_camera.y - obj_camera.camera_height / 10, 
+	obj_camera.x + obj_camera.camera_width  + obj_camera.camera_width  / 10, 
+	obj_camera.y + obj_camera.camera_height + obj_camera.camera_height / 10)) 
+	{
+	exit;
+}
+
 // Check if current object has a sprite.
-if (sprite_index != noone) {
+if (other.faction != faction && sprite_index != noone) {
 	// Determine the direction towards the source of the collision.
 	var impact_direction = point_direction(x, y, other.x, other.y);
 	
@@ -25,9 +35,6 @@ if (sprite_index != noone) {
 			
 			// Set a timer value to be used for various functions.
 			collision_entry[5] = 5;
-			
-			//// Set a timer value to be used for various functions.
-			//collision_entry[6] = false;
 			
 			// Append the new collision data to the array.
 			array_push(collision_detection_data, collision_entry);

@@ -1,4 +1,14 @@
 
+// If current object is not onscreen then exit this event and nullify the potentially expensive processes below.
+if (!point_in_rectangle(x, y, 
+	obj_camera.x - obj_camera.camera_width  / 10, 
+	obj_camera.y - obj_camera.camera_height / 10, 
+	obj_camera.x + obj_camera.camera_width  + obj_camera.camera_width  / 10, 
+	obj_camera.y + obj_camera.camera_height + obj_camera.camera_height / 10)) 
+	{
+	exit;
+}
+
 // Update collision detection data.
 for (var i = 0; i < array_length(collision_detection_data); i += 1) {
 	// Only update data if the timer value is above 0. 
@@ -11,8 +21,3 @@ for (var i = 0; i < array_length(collision_detection_data); i += 1) {
 		collision_detection_data[i][1] = y + lengthdir_y(collision_detection_data[i][4], collision_detection_data[i][2] + image_angle - collision_detection_data[i][3]);
 	}
 }
-
-
-
-//speed = speed * global.time_modifier;
-

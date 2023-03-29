@@ -3,6 +3,10 @@ if (instance_exists(target) && (!state_panning)) {
 	// Set Camera Position
 	camera_x = target.x - (camera_width  / 2);
 	camera_y = target.y - (camera_height / 2);
+	x = camera_x;
+	y = camera_y;
+	//camera_x = clamp(camera_x, 0, room_width  - camera_width);
+	//camera_y = clamp(camera_y, 0, room_height - camera_height);
 }
 
 // Pann Over To New Target

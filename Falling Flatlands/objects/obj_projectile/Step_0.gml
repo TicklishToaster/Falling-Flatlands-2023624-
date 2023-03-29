@@ -6,10 +6,13 @@ if (projectile_sprite_frame >= sprite_get_number(projectile_sprite_id)) {
 }
 
 
-// If object is beyond 0.6x the camera boundaries.
-var range_modifier = 0.9;
-if (!point_in_rectangle(x, y,	creator.x-obj_camera.camera_width*range_modifier, creator.y-obj_camera.camera_height*range_modifier,
-								creator.x+obj_camera.camera_width*range_modifier, creator.y+obj_camera.camera_height*range_modifier)) {			
+// If object is beyond the camera boundaries.
+if (!point_in_rectangle(x, y, 
+	obj_camera.x - obj_camera.camera_width  / 10, 
+	obj_camera.y - obj_camera.camera_height / 10, 
+	obj_camera.x + obj_camera.camera_width  + obj_camera.camera_width  / 10, 
+	obj_camera.y + obj_camera.camera_height + obj_camera.camera_height / 10)) 
+	{
 	instance_destroy(self, false);
 }
 

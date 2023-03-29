@@ -1,7 +1,7 @@
 particle_system = part_system_create();
 part_system_depth(particle_system, +100);
 
-//Exhaust
+// Ship Exhaust
 part_type_ship_exhaust = part_type_create();
 part_type_sprite(	part_type_ship_exhaust, spr_exhaust, false, false, false);
 part_type_size(		part_type_ship_exhaust, 0.4, 0.4, 0.05, 0);
@@ -24,7 +24,7 @@ part_type_alpha3(	part_type_enemy_exhaust, 1, 1, 0);
 part_type_life(		part_type_enemy_exhaust, 20, 20);
 
 
-//Debris
+// Ship Debris
 part_type_ship_debris = part_type_create();
 part_type_sprite(		part_type_ship_debris, spr_ship_debris, false, false, true);
 part_type_life(			part_type_ship_debris, 60, 80);
@@ -41,3 +41,39 @@ part_type_speed(		part_type_asteroid_debris, 2, 2.5, -0.02, 0);
 part_type_direction(	part_type_asteroid_debris, 0, 359, 0, false);
 part_type_orientation(	part_type_asteroid_debris, 0, 359, 1, false, false);
 part_type_alpha3(		part_type_asteroid_debris, 0.8, 0.8, 0);
+
+
+// Ship Charge
+part_type_charge_artemis = part_type_create();
+part_type_shape(	part_type_charge_artemis, pt_shape_line);
+part_type_life(		part_type_charge_artemis, 10, 60);
+part_type_size(		part_type_charge_artemis, 0.1, 0.3, -0.02, 0);
+part_type_speed(	part_type_charge_artemis, 1, 3, 0.01, 0);
+part_type_colour1(	part_type_charge_artemis, make_colour_rgb(175, 150, 200));
+
+// Charger Charge
+part_type_charge_charger = part_type_create();
+//part_type_shape(	part_type_charge_charger, pt_shape_line);
+////part_type_life(		part_type_charge_charger, 10, 60);
+//part_type_life(		part_type_charge_charger, 3000, 3000);
+////part_type_size(		part_type_charge_charger, 0.1, 0.3, -0.02, 0);
+//part_type_size(		part_type_charge_charger, 0.1, 0.3, 0, 0);
+//part_type_speed(	part_type_charge_charger, 1, 3, 0.01, 0);
+//part_type_colour1(	part_type_charge_charger, c_red);
+
+//part_type_charge_artemis = part_type_create();
+//part_type_shape(	part_type_charge_artemis, pt_shape_line);
+//part_type_life(		part_type_charge_artemis, 10, 60);
+//part_type_size(		part_type_charge_artemis, 0.1, 0.3, -0.02, 0);
+//part_type_speed(	part_type_charge_artemis, 1, 3, 0.01, 0);
+//part_type_colour1(	part_type_charge_artemis, make_colour_rgb(175, 150, 200));
+
+
+
+
+//part_type_charge	= part_type_create();
+//part_type_shape(	part_type_charge, pt_shape_disk);
+//part_type_speed(	part_type_charge, 5, 10, 0.1, 0);
+//part_type_colour1(	part_type_charge, c_red);
+//part_type_life(		part_type_charge, 10, 10);
+//part_type_size(		part_type_charge, 0.1, 0.3, -0.02, 0);

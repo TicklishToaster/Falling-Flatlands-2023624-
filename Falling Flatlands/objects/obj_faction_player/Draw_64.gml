@@ -15,6 +15,7 @@ draw_sprite_ext(spr_hp_bar, 2, 20 + 32*(health_points_max-1), ypos, 1, 1, 0, c_w
 
 // Draw greyed out health icon first.
 draw_sprite_ext(spr_hp_icon, 1, 20, ypos, 1, 1, 0, c_white, 1);
+
 // Draw red filled health icon to overlap greyed out icon.
 draw_sprite_ext(spr_hp_icon, 0, 20, ypos, 1, 1, 0, c_white, 0.4 + 0.1 * health_points);
 
