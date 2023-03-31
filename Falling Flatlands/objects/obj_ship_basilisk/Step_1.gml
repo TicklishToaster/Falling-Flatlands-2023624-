@@ -1,10 +1,5 @@
-// Update Hotspot (Center of Player Sprite)
-hotspot_x = x;
-hotspot_y = y;
-
-// Adjust parallax scrolling values.
-obj_camera.background_shift_x += hspeed/4;
-obj_camera.background_shift_y += vspeed/4;
+// Inherit the parent event
+event_inherited();
 
 
 // Calculate Valid Targets ////////////////////////////////////////////////////
@@ -14,8 +9,8 @@ var range_modifier = 0.6;
 for (var i = 0; i < instance_number(obj_faction_enemy); i += 1) {
 	var target_iteration = instance_find(obj_faction_enemy, i);
 	if (point_in_rectangle(target_iteration.x, target_iteration.y,	
-		self.x-obj_camera.camera_width*range_modifier, self.y-obj_camera.camera_height*range_modifier,
-		self.x+obj_camera.camera_width*range_modifier, self.y+obj_camera.camera_height*range_modifier)) 
+		self.x-Camera.camera_width*range_modifier, self.y-Camera.camera_height*range_modifier,
+		self.x+Camera.camera_width*range_modifier, self.y+Camera.camera_height*range_modifier)) 
 		{
 		array_push(targets_in_range, target_iteration);
 	}	
@@ -46,8 +41,8 @@ if (ds_grid_height(target_list) != array_length(targets_in_range)) {
 	
 	// If a target was already set but is now out of valid range, reset the current target to the nearest available enemy.
 	if (instance_exists(projectile_target) && !point_in_rectangle(projectile_target.x, projectile_target.y,	
-		self.x-obj_camera.camera_width*range_modifier, self.y-obj_camera.camera_height*range_modifier,
-		self.x+obj_camera.camera_width*range_modifier, self.y+obj_camera.camera_height*range_modifier)) 
+		self.x-Camera.camera_width*range_modifier, self.y-Camera.camera_height*range_modifier,
+		self.x+Camera.camera_width*range_modifier, self.y+Camera.camera_height*range_modifier)) 
 		{
 		target_index	= 0;
 		projectile_target = ds_grid_get(target_list, 0, target_index);

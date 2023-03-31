@@ -1,6 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
+
 // If the colliding projectile is hostile to own faction.
 if (other.faction != faction) {	
 	// Nullify damage/knockback if projectile has already collided.
