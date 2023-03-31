@@ -5,14 +5,12 @@ if (projectile_sprite_frame >= sprite_get_number(projectile_sprite_id)) {
 	projectile_sprite_frame = 0;
 }
 
-
-// If object is beyond the camera boundaries.
-if (!point_in_rectangle(x, y, 
-	obj_camera.x - obj_camera.camera_width  / 10, 
-	obj_camera.y - obj_camera.camera_height / 10, 
-	obj_camera.x + obj_camera.camera_width  + obj_camera.camera_width  / 10, 
-	obj_camera.y + obj_camera.camera_height + obj_camera.camera_height / 10)) 
-	{
+// Destroy projectile if it goes beyond the camera boundaries.
+var border_x1 = uc_get_view_x() - Camera.camera_width  / 5;
+var border_y1 = uc_get_view_y() - Camera.camera_height / 5;
+var border_x2 = uc_get_view_x() + Camera.camera_width  / 5 + Camera.camera_width;
+var border_y2 = uc_get_view_y() + Camera.camera_height / 5 + Camera.camera_height;
+if (!point_in_rectangle(x, y, border_x1, border_y1, border_x2, border_y2)) {
 	instance_destroy(self, false);
 }
 

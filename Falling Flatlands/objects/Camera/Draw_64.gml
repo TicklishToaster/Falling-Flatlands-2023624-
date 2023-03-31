@@ -180,7 +180,7 @@ if (camera_debug_mode) {
 		basic_info_len = array_length_1d(basic_info);
 		
 		for ( var i=0 ; i<basic_info_len ; i++ ) {
-			draw_text( d_bord, d_bord + d_bord*i*1.5, basic_info[i]);	
+			draw_text_color( d_bord, d_bord + d_bord*i*1.5, basic_info[i], c_white, c_white, c_white, c_white, 1);	
 		}
 		
 		#endregion
@@ -251,3 +251,9 @@ if (camera_debug_mode) {
 }
 
 #endregion
+
+// ==============================================================
+// -----------------------------------------------	DRAW THE BORDERS	----------------------------------
+// ==============================================================
+//draw_rectangle_color(0, 0, (port_width-port_height)/2, port_height, c_black, c_black, c_black, c_black, false);
+//draw_rectangle_color(port_width, 0, port_width - (port_width-port_height)/2, port_height, c_black, c_black, c_black, c_black, false);

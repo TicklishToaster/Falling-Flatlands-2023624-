@@ -16,12 +16,12 @@ if (instance_exists(target) && (state_panning)) {
 	camera_y = lerp(pann_origin_object.hotspot_y - (camera_height / 2), pann_target_object.hotspot_y - (camera_height / 2), dsin(pann_coefficient * 90));
 }
 
-// Camera Shake ///////////////////////////////////////////////////////////////
-if camera_shake > 0 {
-	camera_x += random_range(-camera_shake, camera_shake);
-	camera_y += random_range(-camera_shake, camera_shake);
-	camera_shake = clamp(camera_shake - 0.2, 0, 10);
-}
+//// Camera Shake ///////////////////////////////////////////////////////////////
+//if camera_shake > 0 {
+//	camera_x += random_range(-camera_shake, camera_shake);
+//	camera_y += random_range(-camera_shake, camera_shake);
+//	camera_shake = clamp(camera_shake - 0.2, 0, 10);
+//}
 
 // Set Camera Pos /////////////////////////////////////////////////////////////
 camera_set_view_pos(view_camera[0], camera_x, camera_y);

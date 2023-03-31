@@ -15,7 +15,7 @@ for (var grid_y = 0; grid_y < level_grid_size; grid_y += 1) {
 			ds_grid_get(level_grid, grid_x, grid_y)[0][3]);
 
 		
-		var n = 0; // DELETE LATER
+		var n = 2; // DELETE LATER
 
 		// If true, loop through all adjacent cells in a 3x3 square.
 		if (check_cell == true && grid_cell[2] == false) {
@@ -34,15 +34,13 @@ for (var grid_y = 0; grid_y < level_grid_size; grid_y += 1) {
 						grid_cell[3] = true;
 						ds_grid_set(level_grid, grid_x+i2, grid_y+i1, grid_cell);
 						
-						
-						
-						//var entity_quantity = irandom_range(2, 3);
+						var entity_quantity = irandom_range(2, 3);
 						var entity_quantity = 0
 						for (var i = 0; i < entity_quantity; i += 1) {
 							var entity_x = irandom_range(grid_cell[0][0]+32, grid_cell[0][2]-32);
 							var entity_y = irandom_range(grid_cell[0][1]+32, grid_cell[0][3]-32);
-							var entity_type = choose(obj_sentry, obj_hunter_mk1, obj_hunter_mk2, obj_hunter_mk3);
-							//var entity_type = choose(obj_sentry, obj_charger_mk1);
+							//var entity_type = choose(obj_sentry, obj_hunter_mk1, obj_hunter_mk2, obj_hunter_mk3);
+							var entity_type = choose(obj_sentry, obj_charger_mk2, obj_hunter_mk3);
 							
 							// Create entity
 							instance_create_layer(entity_x, entity_y, "Instances", entity_type);
@@ -182,11 +180,11 @@ for (var grid_y = 0; grid_y < level_grid_size; grid_y += 1) {
 
 ////if (keyboard_check_pressed(ord("1"))) {
 ////	instance_create_layer(x, y, "Instances", obj_ship_squire);
-////	//obj_camera.target = obj_ship_squire;
+////	//Camera.target = obj_ship_squire;
 ////}
 ////if (keyboard_check_pressed(ord("2"))) {
 ////	instance_create_layer(x, y, "Instances", obj_ship_goliath);
-////	//obj_camera.target = obj_ship_goliath;
+////	//Camera.target = obj_ship_goliath;
 ////}
 
 

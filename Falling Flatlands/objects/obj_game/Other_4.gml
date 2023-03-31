@@ -2,7 +2,7 @@
 
 // Initialise grid variables.
 level_grid_size	= 10;
-level_cell_size	= obj_camera.camera_width;
+level_cell_size	= Camera.camera_width;
 level_grid	= ds_grid_create(level_grid_size, level_grid_size);
 
 // Iterate through every cell in the grid array.
@@ -40,11 +40,17 @@ room_height = level_grid_size * level_cell_size;
 // Initialise player variables.
 var starting_x = 320;
 var starting_y = 320;
-var selected_ship = obj_ship_artemis;
+//var selected_ship = obj_ship_squire;
 //var selected_ship = obj_ship_goliath;
+//var selected_ship = obj_ship_basilisk;
+var selected_ship = obj_ship_artemis;
+//var selected_ship = obj_ship_magus;
 
 // Create the selected player ship.
 instance_create_layer(starting_x, starting_y, "Instances", selected_ship);
+
+uc_add_instance_following_list(obj_faction_player);
+//uc_set_mode()
 
 /*
 This loop will only occur once to prevent enemies from 
@@ -97,5 +103,6 @@ surface_width		= 160;
 surface_scale		= 2;
 minimap_cell_width	= level_cell_size / proportion;
 minimap_grid_width	= minimap_cell_width * level_grid_size;
-minimap_offset		= obj_camera.camera_height - surface_width;
+minimap_offset		= Camera.camera_height/2 - surface_width;
+minimap_offset		= Camera.camera_height/2 + surface_width/2;
 minimap_target		= obj_faction_player;

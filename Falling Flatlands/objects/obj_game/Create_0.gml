@@ -20,7 +20,7 @@ enum factions {
 
 //level_grid	= ds_grid_create(10, 10);
 //level_grid_size	= 10;
-//level_cell_size	= obj_camera.camera_width;
+//level_cell_size	= Camera.camera_width;
 
 //room_height = level_grid_size * level_cell_size;
 //room_width	= level_grid_size * level_cell_size;

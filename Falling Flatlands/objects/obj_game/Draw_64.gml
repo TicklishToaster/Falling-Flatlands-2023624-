@@ -1,10 +1,12 @@
 /// @description Draw Minimap
 
-
 // Draw minimap border.
-draw_circle_colour(2 + surface_width/2, -4 + surface_width/2 + minimap_offset, surface_width/2 + 2, c_white, c_white, false);
+draw_circle_colour(+2/Camera.view_scale + surface_width/2, Camera.camera_height -2/Camera.view_scale - surface_width/2, 
+	surface_width/2 + 2, c_white, c_white, false);
+
 // Draw minimap backdrop.
-draw_circle_colour(2 + surface_width/2, -4 + surface_width/2 + minimap_offset, surface_width/2, c_black, c_black, false);
+draw_circle_colour(+2/Camera.view_scale + surface_width/2, Camera.camera_height -2/Camera.view_scale - surface_width/2, 
+	surface_width/2, c_black, c_black, false);
 
 // Recreate Surfaces //////////////////////////////////////////////////////////
 // In the event of a memory leak or buffer, recreate surfaces.
@@ -97,9 +99,6 @@ for (var i = 0; i < instance_number(obj_faction_enemy); i += 1) {
 		2*4, c_red, c_red, false);	
 }
 
-	
-
-
 // Disable some GPU stuff I don't understand.
 gpu_set_blendenable(false)
 gpu_set_colorwriteenable(false,false,false,true);
@@ -110,7 +109,7 @@ draw_rectangle(0, 0, surface_width*4, surface_width*4, false);
 draw_set_alpha(1);
 
 // Draw the circular window to overlap and hide everything outside of its radius.
-draw_circle(2 + surface_width/2*4, 2 + surface_width/2*4, (surface_width/2 - 1)*4, false);
+draw_circle((surface_width/2)*4 + 3, (surface_width/2)*4 + 3, (surface_width/2 - 1)*4, false);
 
 // Re-enable the GPU stuff I don't understand.
 gpu_set_blendenable(true);
@@ -121,5 +120,6 @@ surface_reset_target();
 
 // Draw Surface (Popup Window)
 if (view_visible[1]) {
-	draw_surface_ext(minimap_surface, 2, -4 + minimap_offset, 0.25, 0.25, 0, -1, 1);
+	//draw_surface_ext(minimap_surface, 2, -4*4 + minimap_offset, 0.25, 0.25, 0, -1, 1);
+	draw_surface_ext(minimap_surface, 2/Camera.view_scale, (Camera.camera_height-surface_width) - 2/Camera.view_scale, 0.25, 0.25, 0, -1, 1);
 }

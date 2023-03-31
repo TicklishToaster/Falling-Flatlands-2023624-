@@ -11,6 +11,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -44,7 +45,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"640","varType":1,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1920","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"view_height","filters":[
         "GMTileSet",
         "GMSprite",
@@ -56,7 +57,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"360","varType":1,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1080","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"port_height","filters":[
         "GMTileSet",
         "GMSprite",
@@ -68,7 +69,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"720","varType":0,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1080","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"cam_mode","filters":[
         "GMTileSet",
         "GMSprite",
@@ -80,7 +81,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":true,"rangeMax":6.0,"rangeMin":0.0,"value":"0","varType":1,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":true,"rangeMax":6.0,"rangeMin":0.0,"value":"1","varType":1,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"view_scale","filters":[
         "GMTileSet",
         "GMSprite",
@@ -92,7 +93,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1","varType":0,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.5","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"view_scale_min_limit","filters":[
         "GMTileSet",
         "GMSprite",
@@ -140,7 +141,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"False","varType":3,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"view_auto_scale_factor","filters":[
         "GMTileSet",
         "GMSprite",
@@ -224,7 +225,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":3,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"False","varType":3,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"bars_percentage","filters":[
         "GMTileSet",
         "GMSprite",
@@ -452,7 +453,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":3,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"camera_debug_mode","filters":[
         "GMTileSet",
         "GMSprite",
@@ -464,7 +465,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"False","varType":3,},
+      ],"listItems":null,"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"scale_relative_to_mouse_enabled","filters":[
         "GMTileSet",
         "GMSprite",

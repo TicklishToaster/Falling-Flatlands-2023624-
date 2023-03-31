@@ -28,9 +28,9 @@
 		
 //switch(room){
 //	case rm_game:
-//		//draw_sprite_ext(spr_ship, 0, obj_camera.camera_width-20, 40-10, 0.5, 0.5, 0, c_white, 1);
-//		draw_text(obj_camera.camera_width-50, 10-2, string(lives));
-//		draw_text(obj_camera.camera_height-200, 10-2, string(score)+" ");
+//		//draw_sprite_ext(spr_ship, 0, Camera.camera_width-20, 40-10, 0.5, 0.5, 0, c_white, 1);
+//		draw_text(Camera.camera_width-50, 10-2, string(lives));
+//		draw_text(Camera.camera_height-200, 10-2, string(score)+" ");
 //		break;
 		
 //	case rm_start:

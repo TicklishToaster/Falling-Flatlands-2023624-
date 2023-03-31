@@ -13,7 +13,8 @@ aspect_ratio = view_width/view_height; // Relation between the windows size and 
 port_width = port_height*aspect_ratio; // Width of the window where the game will be drawn
 // port_height --> Height of the window where the game will be drawn
 
-display_set_gui_size(port_width, port_height); //  < ------------------------ THIS LINE IS TOTALLY OPTIONAL
+//display_set_gui_size(port_width, port_height); //  < ------------------------ THIS LINE IS TOTALLY OPTIONAL
+display_set_gui_size(port_width*view_scale, port_height*view_scale); //  < ------------------------ THIS LINE IS TOTALLY OPTIONAL
 
 x = view_width/2; // Adjust the camera to the top left corner
 y = view_height/2;
@@ -163,3 +164,10 @@ debug_color = c_white;
 image_alpha = 0; // Make sure to not show the sprite of the Camera
 
 #endregion
+
+
+camera_width = camera_get_view_width(view_camera[0]);
+camera_height = camera_get_view_height(view_camera[0]);
+target = noone;
+background_shift_x = 0;
+background_shift_y = 0;
