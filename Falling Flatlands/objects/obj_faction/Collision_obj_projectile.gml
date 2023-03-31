@@ -1,12 +1,12 @@
 // If current object is not onscreen then exit this event and nullify the potentially expensive processes below.
-if (!point_in_rectangle(x, y, 
-	obj_camera.x - obj_camera.camera_width  / 10, 
-	obj_camera.y - obj_camera.camera_height / 10, 
-	obj_camera.x + obj_camera.camera_width  + obj_camera.camera_width  / 10, 
-	obj_camera.y + obj_camera.camera_height + obj_camera.camera_height / 10)) 
-	{
+var border_x1 = uc_get_view_x() - Camera.camera_width  / 10;
+var border_y1 = uc_get_view_y() - Camera.camera_height / 10;
+var border_x2 = uc_get_view_x() + Camera.camera_width  / 10 + Camera.camera_width;
+var border_y2 = uc_get_view_y() + Camera.camera_height / 10 + Camera.camera_height;
+if (!point_in_rectangle(x, y, border_x1, border_y1, border_x2, border_y2)) {
 	exit;
 }
+
 
 // Check if current object has a sprite.
 if (sprite_index != noone) {
@@ -34,7 +34,7 @@ if (sprite_index != noone) {
 			collision_entry[4] = i;
 			
 			// Set a timer value to be used for various functions.
-			collision_entry[5] = 5;
+			collision_entry[5] = 5; // 5
 			
 			// Append the new collision data to the array.
 			array_push(collision_detection_data, collision_entry);

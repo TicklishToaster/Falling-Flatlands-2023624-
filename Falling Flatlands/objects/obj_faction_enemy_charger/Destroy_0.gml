@@ -10,7 +10,7 @@ with(obj_particles){
 score += destroy_score;
 
 // Toggle Camera Shake
-obj_camera.camera_shake = 2;
+uc_shake(2, 0.1);
 
 // Play destroy audio clip.
 audio_play_sound(SFX__FTL____Enemy_Destroy__C_, 10, false);

@@ -12,7 +12,7 @@ for (var i = 0; i < array_length(projectile_collisions); i += 1) {
 
 // Check to see if projectile was spawned by this object.
 if (other.creator != self) {
-	// Append colliding projectile to projectil collisions array.
+	// Append colliding projectile to projectile collisions array.
 	array_push(projectile_collisions, other)
 
 	// Set variables in the newly registered projectile.

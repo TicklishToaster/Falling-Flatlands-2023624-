@@ -13,5 +13,5 @@ event_inherited();
 //score += destroy_score;
 
 //// Toggle Camera Shake
-//obj_camera.camera_shake = 1;
+//Camera.camera_shake = 1;
 //audio_play_sound(SFX__FTL____Enemy_Destroy__C_, 10, false);

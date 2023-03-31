@@ -33,7 +33,7 @@ if (!boosting) {
 		ship_acceleration	= acceleration;
 	}
 	else if (abs(new_angle) > 30) {
-		ship_rotation		= rotation_speed*2;
+		ship_rotation		= rotation_speed*1;
 		ship_acceleration	= acceleration;	
 
 	}
@@ -42,12 +42,13 @@ if (!boosting) {
 	image_angle += clamp(new_angle, -ship_rotation, ship_rotation);
 
 	// If player is within enagement range.
-	if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement_range) {
+	if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) <= engagement_range) {
 		if (charge_enable) {
+			// Slowdown to a halt when charging.
 			speed = lerp(speed, 0, max(speed * 0.1, max_speed_default*0.01));
 		}		
 		
-		if (!charge_enable) {
+		if (!charge_enable && attack_cooldown_timer <= 0) {
 			if (abs(new_angle) < 5) {
 				charge_enable = true;
 				charge_timer = charge_timer_max;
@@ -58,6 +59,7 @@ if (!boosting) {
 	// If player is outside of enagement range.
 	else if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) > engagement_range) {
 		if (charge_enable) {
+			// Slowdown to a halt when charging.
 			speed = lerp(speed, 0, max(speed * 0.1, max_speed_default*0.01));
 		}
 		
@@ -67,7 +69,19 @@ if (!boosting) {
 		}
 	}
 
+	// Move toward the player if too far.
+	if point_distance(x, y, obj_faction_player.x, obj_faction_player.y) > engagement_range/2 {
+		// Apply acceleration to current motion.
+		motion_add(image_angle, ship_acceleration/4);	
+	}
 
+	// Move away from the player if too close.
+	else if point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement_range/2 {
+		// Subtract acceleration from current motion.
+		motion_add(image_angle, -ship_acceleration);	
+	}
+
+	#region
 	// Perform a complex movement calculation when there are fewer instances of this object.
 	if (instance_number(obj_faction_enemy_hunter) < 64) {
 		// Push away from other enemy objects if too close.
@@ -94,19 +108,33 @@ if (!boosting) {
 			}
 		}
 	}
+	#endregion
 }
 
 if (boosting) {
-	if (abs(point_distance(x, y, boost_location_x, boost_location_y)) > boost_distance) {
+	boosted_timer = clamp(boosted_timer - (room_speed / 60 / 60), 0, boosted_timer_max);
+	if (boosted_timer) <= 0 {
 		boosting = false;
-		max_speed = max_speed_default
+		boosted_timer = boosted_timer_max;
+		attack_cooldown = true;
+		attack_cooldown_timer = attack_cooldown_timer_max;
 		knockback_modifier = 1;
+		show_debug_message("SLOPE")
+		show_debug_message(max_speed)
+		speed = clamp(speed, -max_speed, max_speed);
+	}
+}
+
+// Countdown attack cooldown.
+if (attack_cooldown) {
+	attack_cooldown_timer = clamp(attack_cooldown_timer - (room_speed / 60 / 60), 0, attack_cooldown_timer_max);
+	if (attack_cooldown_timer) <= 0 {
+		attack_cooldown = false;
 	}
 }
 
 if (charge_enable) {
 	charge_timer = clamp(charge_timer - (room_speed / 60 / 60), 0, charge_timer_max);
-	//show_debug_message(charge_timer)
 	if (charge_timer) <= 0 {
 		charge_complete = true;
 	}
@@ -118,15 +146,16 @@ if (charge_enable && charge_complete) {
 	charge_enable = false;
 	charge_complete = false;
 	charge_timer = charge_timer_max;
-	max_speed = max_speed_boosted;
+	//max_speed = max_speed_boosted;
 	knockback_modifier = 4;
-	boost_location_x = x;
-	boost_location_y = y;
+	//boost_location_x = x;
+	//boost_location_y = y;
 		
 		
 	// Reset and apply new motion to the ship.
 	motion_set(image_angle, max(0.1, speed));
-	motion_add(image_angle, max_speed);
+	//motion_add(image_angle, max_speed);
+	motion_add(image_angle, max_speed_boosted);
 	//speed = clamp(max_speed_default + (max_speed_default * booster_charge_timer/booster_charge_timer_max), 0, max_speed_boosted);
 			
 	// Play audio clip
@@ -135,12 +164,12 @@ if (charge_enable && charge_complete) {
 
 
 
-// Clamp Maximum Speed.
-speed = clamp(speed, -max_speed/2, max_speed);
+//// Clamp Maximum Speed.
+//speed = clamp(speed, -max_speed/2, max_speed);
 
 
 
-if (mouse_check_button(mb_left)) {
-	x = mouse_x;
-	y = mouse_y;
-}
+//if (mouse_check_button(mb_left)) {
+//	x = mouse_x;
+//	y = mouse_y;
+//}

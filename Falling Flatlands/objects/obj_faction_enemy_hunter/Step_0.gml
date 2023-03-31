@@ -39,6 +39,7 @@ else if point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engag
 	motion_add(image_angle, -ship_acceleration);	
 }
 
+#region
 // Perform a complex movement calculation when there are fewer instances of this object.
 if (instance_number(obj_faction_enemy_hunter) < 64) {
 	// Push away from other enemy objects if too close.
@@ -65,6 +66,16 @@ else {
 		}
 	}
 }
+#endregion
 
-// Clamp Maximum Speed.
-speed = clamp(speed, -max_speed/2, max_speed);
+//// Clamp Maximum Speed.
+////speed = clamp(speed, -max_speed/2, max_speed);
+////speed = clamp(speed, lerp(speed, -max_speed, 0.01), lerp(speed, max_speed, 0.01));
+//if (speed > max_speed) {
+//	//speed = lerp(speed, max_speed, 0.03);
+//	speed = lerp(speed, max_speed, acceleration);
+//}
+//else if (speed < -max_speed) {
+//	//speed = lerp(speed, -max_speed, 0.03);
+//	speed = lerp(speed, -max_speed, acceleration);
+//}
