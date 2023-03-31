@@ -1,7 +1,3 @@
-// Inherit the parent event
-event_inherited();
-
-
 // If a rocket target still exists.
 if (instance_exists(projectile_target)) {
 	// Determine the angle required to face the target instance.
@@ -13,22 +9,33 @@ if (instance_exists(projectile_target)) {
 	// Rotate the rocket toward the new angle and clamp it.
 	image_angle += clamp(new_angle, -projectile_rotation, projectile_rotation);
 	
+	// Force the rocket to only move in the direction it is facing.
+	direction = image_angle;
+	
 	// Increase the potential rotation speed of the rocket over time.
-	projectile_rotation = clamp(projectile_rotation + (room_speed / 60 / 60)*homing_increment, 0, 10);
-	
-	// Increase the lock-on strength of the rocket over time.	
-	projectile_lock		= clamp(projectile_lock		+ (room_speed / 60 / 60), 0, 100);
-	
-	// Further direct the rocket movement towards the target using projectile lock.
-	// This is done to improve the homing strength of the rocket over time to ensure it hits the target.
-	motion_add(point_direction(x, y, projectile_target.x, projectile_target.y), projectile_lock/100);
+	projectile_rotation	= clamp(projectile_rotation + (room_speed / 60 / 60), 0, projectile_rotation_max);
 }
 
-// Add Acceleration to Movement.
+// Add acceleration to motion.
 motion_add(image_angle, projectile_acceleration);
+//motion_add(direction, projectile_acceleration);
 
-// Increase the potential rotation speed of the rocket over time.
-projectile_speed = clamp(projectile_speed + (room_speed / 60 / 300)*homing_increment, 0, 5);
+// Clamp maximum speed.
+speed = clamp(speed, -projectile_speed_max, projectile_speed_max);
 
-// Clamp Maximum Speed.
-speed = clamp(speed, -projectile_speed/2, projectile_speed);
+
+//// Destroy projectile if it goes beyond the camera boundaries.
+//var border_x1 = uc_get_view_x() - Camera.camera_width  / 2;
+//var border_y1 = uc_get_view_y() - Camera.camera_height / 2;
+//var border_x2 = uc_get_view_x() + Camera.camera_width  / 2 + Camera.camera_width;
+//var border_y2 = uc_get_view_y() + Camera.camera_height / 2 + Camera.camera_height;
+//if (!point_in_rectangle(x, y, border_x1, border_y1, border_x2, border_y2)) {
+//	instance_destroy(self, false);
+//}
+
+
+//// Destroy projectile if hp reduced to 0.
+//if (projectile_hp <= 0) {
+//	instance_destroy();
+//}
+
