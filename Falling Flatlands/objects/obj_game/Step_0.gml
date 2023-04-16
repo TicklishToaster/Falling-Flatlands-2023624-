@@ -15,7 +15,7 @@ for (var grid_y = 0; grid_y < level_grid_size; grid_y += 1) {
 			ds_grid_get(level_grid, grid_x, grid_y)[0][3]);
 
 		
-		var n = 2; // DELETE LATER
+		var n = 0; // DELETE LATER
 
 		// If true, loop through all adjacent cells in a 3x3 square.
 		if (check_cell == true && grid_cell[2] == false) {
@@ -35,12 +35,29 @@ for (var grid_y = 0; grid_y < level_grid_size; grid_y += 1) {
 						ds_grid_set(level_grid, grid_x+i2, grid_y+i1, grid_cell);
 						
 						var entity_quantity = irandom_range(2, 3);
-						var entity_quantity = 0
+						var entity_quantity = 1
+						//var entity_quantity = 0;
 						for (var i = 0; i < entity_quantity; i += 1) {
+							//var entity_type = choose(obj_sentry, obj_hunter_mk1, obj_hunter_mk2, obj_hunter_mk3);
+							//var entity_type = choose(obj_sentry, obj_charger_mk2, obj_hunter_mk3);
+							var entity_type = choose(obj_swarmer_mk1, obj_swarmer_mk2);
+							var entity_dimensions = sprite_get_width(object_get_sprite(entity_type))/2;
+							
 							var entity_x = irandom_range(grid_cell[0][0]+32, grid_cell[0][2]-32);
 							var entity_y = irandom_range(grid_cell[0][1]+32, grid_cell[0][3]-32);
-							//var entity_type = choose(obj_sentry, obj_hunter_mk1, obj_hunter_mk2, obj_hunter_mk3);
-							var entity_type = choose(obj_sentry, obj_charger_mk2, obj_hunter_mk3);
+							
+							
+							// Ensure the spawn position does not overlap with an existing object.
+							while (collision_rectangle(
+								entity_x-entity_dimensions, entity_y-entity_dimensions, 
+								entity_x+entity_dimensions, entity_y+entity_dimensions, 
+								obj_faction, false, true)) 
+								{
+								entity_x = irandom_range(grid_cell[0][0]+32, grid_cell[0][2]-32);
+								entity_x = irandom_range(grid_cell[0][1]+32, grid_cell[0][3]-32);	
+							}
+							
+
 							
 							// Create entity
 							instance_create_layer(entity_x, entity_y, "Instances", entity_type);
@@ -147,7 +164,7 @@ for (var grid_y = 0; grid_y < level_grid_size; grid_y += 1) {
 
 
 
-
+show_debug_overlay(true)
 
 
 

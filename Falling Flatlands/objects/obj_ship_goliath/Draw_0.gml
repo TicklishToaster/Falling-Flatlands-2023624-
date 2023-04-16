@@ -22,7 +22,7 @@ if (input_up_hold) {
 // Draw Ship Hull /////////////////////////////////////////////////////////////
 draw_sprite_ext(sprite_index, -1, x, y, 1, 1, image_angle, c_aqua, image_alpha);
 
-draw_line_width(x, y, x+lengthdir_x(speed*8, direction), y+lengthdir_y(speed*8, direction), 2);
+//draw_line_width(x, y, x+lengthdir_x(speed*8, direction), y+lengthdir_y(speed*8, direction), 2);
 
 // Inherit the parent event
 event_inherited();

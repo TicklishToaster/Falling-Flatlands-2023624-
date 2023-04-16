@@ -24,7 +24,7 @@ draw_sprite_ext(shield_sprite, 0,
 
 // Draw shield impact effects.
 for (var i = 0; i < array_length(collision_detection_data); i += 1) {
-	if (collision_detection_data[i][5]-4 > 0 && collision_detection_data[i][6] == true ) {
+	if (collision_detection_data[i][5]-4 > 0 && collision_detection_data[i][7] == true ) {
 		// Interpolate the position to draw shield impact sprite (relative to shield surface).		
 		//var camera_length = uc_get_view_x()
 		//var camera_height = uc_get_view_y()

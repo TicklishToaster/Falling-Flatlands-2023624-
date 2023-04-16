@@ -1,16 +1,26 @@
 // Inherit the parent event
 event_inherited();
 
+
+// Determine the angle required to face the target ship.
+var new_angle = point_direction(x, y, obj_faction_player.x, obj_faction_player.y);
+	
+// Calculate the closest angle required to face the target (clock-wise or anti clock-wise).
+new_angle = angle_difference(new_angle, gun_angle);
+	
+// Rotate ship gun toward new angle at set turn speed.
+gun_angle += clamp(new_angle, -rotation_speed, rotation_speed);
+
 // If player is in range.
 if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement_range) {
-	// Determine the angle required to face the target ship.
-	var new_angle = point_direction(x, y, obj_faction_player.x, obj_faction_player.y);
+	//// Determine the angle required to face the target ship.
+	//var new_angle = point_direction(x, y, obj_faction_player.x, obj_faction_player.y);
 	
-	// Calculate the closest angle required to face the target (clock-wise or anti clock-wise).
-	new_angle = angle_difference(new_angle, gun_angle);
+	//// Calculate the closest angle required to face the target (clock-wise or anti clock-wise).
+	//new_angle = angle_difference(new_angle, gun_angle);
 	
-	// Rotate ship gun toward new angle at set turn speed.
-	gun_angle += clamp(new_angle, -rotation_speed, rotation_speed);
+	//// Rotate ship gun toward new angle at set turn speed.
+	//gun_angle += clamp(new_angle, -rotation_speed, rotation_speed);
 	
 	// Fire Projectile
 	if (abs(new_angle) < 15 && attack_cooldown == false) {
@@ -45,16 +55,20 @@ if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagemen
 		// Enable attack cooldown.
 		attack_cooldown = true;
 	}
+	
+	// Clamp speed.
+	speed = clamp(speed, 0, 0);
 }
-
-//// Countdown attack cooldown.
-//if (attack_cooldown) {
-//	attack_cooldown_timer = clamp(attack_cooldown_timer - (room_speed / 60 / 60), 0, attack_cooldown_timer_max);
-//	if (attack_cooldown_timer) <= 0 {
-//		attack_cooldown = false;
-//		attack_cooldown_timer = attack_cooldown_timer_max;
-//	}
+//// If player is out of range.
+//else if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) > engagement_range) {
+//	// Slowly move towards the player.
+//	var new_direction = point_direction(x, y, obj_faction_player.x, obj_faction_player.y);
+//	motion_add(new_direction, acceleration);
+	
+//	// Clamp speed.
+//	speed = clamp(speed, -max_speed, max_speed);
 //}
+
 
 
 

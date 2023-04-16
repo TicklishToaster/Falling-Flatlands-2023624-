@@ -1,7 +1,6 @@
 // Inherit the parent event
 event_inherited();
 
-
 // If enemy is not onscreen then exit this event and nullify the potentially expensive processes below.
 var border_x1 = uc_get_view_x() - Camera.camera_width  / 10;
 var border_y1 = uc_get_view_y() - Camera.camera_height / 10;

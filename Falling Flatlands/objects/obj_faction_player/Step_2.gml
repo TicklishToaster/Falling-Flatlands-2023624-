@@ -84,6 +84,28 @@ if (iframes_enabled) {
 #endregion
 
 
+// Calculate Pseudo-I-Frames //////////////////////////////////////////////////
+// Countdown collision damage cooldown.
+if (collision_damage_cooldown) {
+	collision_damage_timer = clamp(collision_damage_timer - (room_speed / 60 / 60), 0, collision_damage_timer_max);
+	if (collision_damage_timer) <= 0 {
+		collision_damage_cooldown	= false;
+		collision_damage_timer		= collision_damage_timer_max;
+	}
+}
+
+
+// Calculate Shield Effect Cooldown ///////////////////////////////////////////
+// Countdown shield cooldown.
+if (shield_effect_cooldown) {
+	shield_effect_timer = clamp(shield_effect_timer - (room_speed / 60 / 60), 0, shield_effect_timer_max);
+	if (shield_effect_timer) <= 0 {
+		shield_effect_cooldown	= false;
+		shield_effect_timer	= shield_effect_timer_max;
+	}
+}
+
+
 // Room Boundaries ////////////////////////////////////////////////////////////
 #region
 // Bounce the player off the edges of the room if they attempt to go out of bounds.

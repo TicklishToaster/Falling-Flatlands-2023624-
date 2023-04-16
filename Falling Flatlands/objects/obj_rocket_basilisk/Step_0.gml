@@ -18,7 +18,6 @@ if (instance_exists(projectile_target)) {
 
 // Add acceleration to motion.
 motion_add(image_angle, projectile_acceleration);
-//motion_add(direction, projectile_acceleration);
 
 // Clamp maximum speed.
 speed = clamp(speed, -projectile_speed_max, projectile_speed_max);

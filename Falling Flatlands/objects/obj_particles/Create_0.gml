@@ -18,13 +18,35 @@ part_type_life(		part_type_ship_exhaust_large, 20, 20);
 
 part_type_enemy_exhaust = part_type_create();
 part_type_sprite(	part_type_enemy_exhaust, spr_exhaust, false, false, false);
-part_type_size(		part_type_enemy_exhaust, 0.4, 0.4, 0.05, 0);
+part_type_size(		part_type_enemy_exhaust, 0.8, 0.8, 0.05, 0);
 part_type_colour3(	part_type_enemy_exhaust, c_yellow, c_orange, c_red);
 part_type_alpha3(	part_type_enemy_exhaust, 1, 1, 0);
 part_type_life(		part_type_enemy_exhaust, 20, 20);
 
+part_type_sentry_exhaust = part_type_create();
+part_type_shape(	part_type_sentry_exhaust, pt_shape_circle);
+part_type_size(		part_type_sentry_exhaust, 1.0, 1.0, 0.03, 0);
+part_type_colour3(	part_type_sentry_exhaust, c_red, c_red, c_red);
+part_type_alpha3(	part_type_sentry_exhaust, 1, 1, 0);
+part_type_life(		part_type_sentry_exhaust, 20, 20);
+
+part_type_sentry_ring = part_type_create();
+part_type_shape(	part_type_sentry_ring, pt_shape_circle);
+part_type_size(		part_type_sentry_ring, 1.0, 1.0, 0.03, 0);
+part_type_colour3(	part_type_sentry_ring, c_red, c_red, c_red);
+part_type_alpha3(	part_type_sentry_ring, 1, 1, 0);
+part_type_life(		part_type_sentry_ring, 20, 20);
+
+part_type_swarmer_image = part_type_create();
+part_type_alpha2(		part_type_swarmer_image, 1, 0);
+part_type_life(			part_type_swarmer_image, 20, 20);		
+part_type_orientation(	part_type_swarmer_image, 0, 0, 0, 0, 0);
+part_type_sprite(		part_type_swarmer_image, spr_enemy_swarmer, false, false, false);
+
 
 // Ship Debris
+part_type_swarmer_debris = part_type_create();
+
 part_type_ship_debris = part_type_create();
 part_type_sprite(		part_type_ship_debris, spr_ship_debris, false, false, true);
 part_type_life(			part_type_ship_debris, 60, 80);

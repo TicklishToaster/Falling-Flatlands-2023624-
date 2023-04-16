@@ -20,7 +20,7 @@ attack_cooldown_timer	= attack_cooldown_timer_max;
 max_speed_default		= max_speed;
 max_speed_boosted		= max_speed*2;
 //acceleration			= 0.10;	// 0.05
-rotation_speed_default	= rotation_speed;
+//rotation_speed_default	= rotation_speed;
 rotation_speed_boosted	= rotation_speed/(rotation_speed*2);
 
 // I-Frames

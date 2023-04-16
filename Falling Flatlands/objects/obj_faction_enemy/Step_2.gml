@@ -2,9 +2,26 @@
 event_inherited();
 
 
+// Check if object should be destroyed.
+if (health_points <= 0){
+	instance_destroy();
+}
+
+
+// Calculate Pseudo-I-Frames //////////////////////////////////////////////////
+// Countdown collision damage cooldown.
+if (collision_damage_cooldown) {
+	collision_damage_timer = clamp(collision_damage_timer - (room_speed / 60 / 60), 0, collision_damage_timer_max);
+	if (collision_damage_timer) <= 0 {
+		collision_damage_cooldown	= false;
+		collision_damage_timer		= collision_damage_timer_max;
+	}
+}
+
+
 // Adjust Velocity ////////////////////////////////////////////////////////////
 #region
-// Lerp speed to upper/lower limits.
+// Lerp speed to upper/lower limits if they exceed them.
 if (speed > max_speed) {
 	speed = lerp(speed, max_speed, acceleration);
 }

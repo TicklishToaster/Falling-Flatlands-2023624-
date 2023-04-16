@@ -35,7 +35,8 @@ if (booster_charge_enable && !booster_charge_complete) {
 
 // Draw Propusion Effects /////////////////////////////////////////////////////
 // Particle FX.
-if (!boost_mode && input_up_hold) {
+//if (!boost_mode && input_up_hold) {
+if (!boost_mode && (input_up_hold || input_left_hold || input_right_hold)) {
 	exhaust_counter++;
 	if(exhaust_counter >= 4){
 		exhaust_counter = 0;

@@ -1,4 +1,8 @@
-/// @description Take Damage Effects
+/// @description Apply Damage
+
+// Inherit the parent event
+event_inherited();
+
 // Play audio clip for taking damage.
 if (health_points >= 1) {
 	audio_play_sound(choose(

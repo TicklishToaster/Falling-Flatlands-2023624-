@@ -1,4 +1,4 @@
-// Inherit the parent event
+ //Inherit the parent event
 event_inherited();
 
 
@@ -67,15 +67,3 @@ else {
 	}
 }
 #endregion
-
-//// Clamp Maximum Speed.
-////speed = clamp(speed, -max_speed/2, max_speed);
-////speed = clamp(speed, lerp(speed, -max_speed, 0.01), lerp(speed, max_speed, 0.01));
-//if (speed > max_speed) {
-//	//speed = lerp(speed, max_speed, 0.03);
-//	speed = lerp(speed, max_speed, acceleration);
-//}
-//else if (speed < -max_speed) {
-//	//speed = lerp(speed, -max_speed, 0.03);
-//	speed = lerp(speed, -max_speed, acceleration);
-//}

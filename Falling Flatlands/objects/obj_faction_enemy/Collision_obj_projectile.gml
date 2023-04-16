@@ -1,39 +1,42 @@
+/// @description Team Damage Enabled
+
 // Inherit the parent event
 event_inherited();
 
-
-// Nullify damage/knockback if projectile has already collided or if projectile was spawned by this object.
+// Check for exit conditions.
 for (var i = 0; i < array_length(projectile_collisions); i += 1) {
-	if (other == projectile_collisions[i] || other.creator == self) {
+	// Nullify damage and knockback if projectile has already collided.
+	if (other == projectile_collisions[i]) {
+		// Exit event.
+		exit;		
+	}
+	// Nullify damage and knockback if projectile was spawned by this object.
+	if (other.creator == self) {
 		// Exit event.
 		exit;		
 	}
 }
 
-// Check to see if projectile was spawned by this object.
-if (other.creator != self) {
+// Exit if current object is a charger, as it reacts differently when taking damage.
+if (object_is_ancestor(object_index, obj_faction_enemy_charger)) {
+	exit;
+}
+
+// If the colliding projectile is hostile to current faction.
+if (other.faction != faction) {
 	// Append colliding projectile to projectile collisions array.
 	array_push(projectile_collisions, other)
-
+	
 	// Set variables in the newly registered projectile.
 	other.collider = self;
 	other.projectile_hp -= 1;
-	with (other) {event_user(0);}	
+	with (other) {event_user(0);}
 		
-	// Deduct projectile damage from health points.
-	health_points -= other.projectile_damage;
-
-	// Call "Take Damage Effects" event.
+	// Apply damage and knockback.
+	take_damage = other.projectile_damage;
+	// Call damage event.
 	event_user(0);
-}
-			
-// Apply knockback to this object using its knockback modifier with the projectile knockback and direction. 
-if (knockback_modifier != 0) {
-	//motion_add(collision_detection_data[array_length(collision_detection_data)-1][2]-180+180, other.projectile_knockback * knockback_modifier);
-	motion_add(collision_detection_data[array_length(collision_detection_data)-1][2]-180, other.projectile_knockback * knockback_modifier);
-	//motion_add(dir, other.projectile_knockback * knockback_modifier);	
-	var dir = point_direction(other.x, other.y, x, y);
-	//motion_add(dir-180, other.projectile_knockback);
-	//show_debug_message(point_direction(x, y, other.x, other.y))
-	//show_debug_message(point_direction(other.x, other.y, x, y))
+		
+	// Call knockback event.
+	event_user(1);
 }

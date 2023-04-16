@@ -18,6 +18,16 @@ attack_cooldown		= false;
 iframes_enabled		= false;
 iframes_blink		= 0;
 
+// Collision Cooldown
+collision_damage_cooldown	= false;
+collision_damage_timer_max	= 2.0;
+collision_damage_timer		= collision_damage_timer_max;
+
+// Shield Cooldown
+shield_effect_cooldown	= false;
+shield_effect_timer_max	= 0.5;
+shield_effect_timer		= shield_effect_timer_max;
+
 // FX
 exhaust_counter		= 0;
 

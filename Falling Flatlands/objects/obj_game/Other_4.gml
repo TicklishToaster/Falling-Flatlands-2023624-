@@ -41,9 +41,9 @@ room_height = level_grid_size * level_cell_size;
 var starting_x = 320;
 var starting_y = 320;
 //var selected_ship = obj_ship_squire;
-//var selected_ship = obj_ship_goliath;
+var selected_ship = obj_ship_goliath;
 //var selected_ship = obj_ship_basilisk;
-var selected_ship = obj_ship_artemis;
+//var selected_ship = obj_ship_artemis;
 //var selected_ship = obj_ship_magus;
 
 // Create the selected player ship.
@@ -106,3 +106,5 @@ minimap_grid_width	= minimap_cell_width * level_grid_size;
 minimap_offset		= Camera.camera_height/2 - surface_width;
 minimap_offset		= Camera.camera_height/2 + surface_width/2;
 minimap_target		= obj_faction_player;
+
+

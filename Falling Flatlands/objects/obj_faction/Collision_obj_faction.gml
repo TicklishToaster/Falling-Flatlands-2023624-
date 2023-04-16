@@ -1,8 +1,8 @@
 // If current object is not onscreen then exit this event and nullify the potentially expensive processes below.
-var border_x1 = uc_get_view_x() - Camera.camera_width  / 10;
-var border_y1 = uc_get_view_y() - Camera.camera_height / 10;
-var border_x2 = uc_get_view_x() + Camera.camera_width  / 10 + Camera.camera_width;
-var border_y2 = uc_get_view_y() + Camera.camera_height / 10 + Camera.camera_height;
+var border_x1 = uc_get_view_x() - Camera.camera_width  / 5;
+var border_y1 = uc_get_view_y() - Camera.camera_height / 5;
+var border_x2 = uc_get_view_x() + Camera.camera_width  / 5 + Camera.camera_width;
+var border_y2 = uc_get_view_y() + Camera.camera_height / 5 + Camera.camera_height;
 if (!point_in_rectangle(x, y, border_x1, border_y1, border_x2, border_y2)) {
 	exit;
 }
@@ -35,6 +35,9 @@ if (other.faction != faction && sprite_index != noone) {
 			
 			// Set a timer value to be used for various functions.
 			collision_entry[5] = 5;
+			
+			// Set the id of the colliding object.
+			collision_entry[6] = other.id;
 			
 			// Append the new collision data to the array.
 			array_push(collision_detection_data, collision_entry);

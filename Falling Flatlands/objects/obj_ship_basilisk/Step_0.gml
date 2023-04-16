@@ -35,10 +35,6 @@ if input_right_hold {
 // Clamp maximum speed.
 speed = clamp(speed, 0, max_speed);
 
-//// Force ship to only move in the direction it's facing.
-//direction = image_angle;
-
-
 // Weapon Controls ////////////////////////////////////////////////////////////
 #region
 // Switch to impact rocket.
@@ -63,10 +59,10 @@ if (input_key3_press) {
 	audio_play_sound(SFX__ITB____Basilisk_Rocket_3, 10, false, 0.5);
 }
 
-// Enable/disable rocket homing.
-if (input_control_press) {
-	homing_enabled = !homing_enabled;
-}
+//// Enable/disable rocket homing.
+//if (input_control_press) {
+//	homing_enabled = !homing_enabled;
+//}
 #endregion
 
 #region
@@ -103,7 +99,6 @@ if (mouse_wheel_up() || input_uparrow_press) {
 	for (var i = 0; i < ds_grid_height(target_list); i += 1) {
 		if (ds_grid_get(target_list, 0, i) == projectile_target) {
 			target_index = i;
-			show_debug_message("REDEFINE CURRENT TARGET")
 		}
 	}
 	
@@ -163,7 +158,6 @@ if (mouse_wheel_down() || input_downarrow_press) {
 	for (var i = 0; i < ds_grid_height(target_list); i += 1) {
 		if (ds_grid_get(target_list, 0, i) == projectile_target) {
 			target_index = i;
-			show_debug_message("REDEFINE CURRENT TARGET")
 		}
 	}
 	
@@ -191,8 +185,8 @@ if (mouse_wheel_down() || input_downarrow_press) {
 }
 #endregion
 
-#region
 // Fire Ship Weapon.
+#region
 if (input_space_hold) {
 	if (attack_cooldown == false) {
 		if (rocket_type == 1 && attack_cooldown == false) {
@@ -204,7 +198,7 @@ if (input_space_hold) {
 				rocket_type				= 1;
 				projectile_hp			= other.projectile_hp;
 				projectile_damage			= 3;
-				projectile_knockback		= 3;
+				knockback_send				= 3;
 				projectile_speed_max		= 10.0;
 				projectile_rotation_max		= 1.0;
 				projectile_acceleration		= 0.05;
@@ -232,7 +226,7 @@ if (input_space_hold) {
 				rocket_type				= 2;
 				projectile_hp			= other.projectile_hp;
 				projectile_damage			= 2;
-				projectile_knockback		= 2;
+				knockback_send				= 2;
 				projectile_speed_max		= 5.0;
 				projectile_rotation_max		= 3.0;
 				projectile_acceleration		= 0.03;
@@ -252,32 +246,66 @@ if (input_space_hold) {
 		}
 	
 		else if (rocket_type == 3 && attack_cooldown == false) {
-			// Create rocket projectile and set attributes.
-			with (instance_create_layer(x, y, "Instances", obj_rocket_basilisk)) {
-				creator					= other;		
-				faction					= other.faction;
-				if (other.homing_enabled) {projectile_target = other.projectile_target;}
-				rocket_type				= 3;
-				projectile_hp			= other.projectile_hp;
-				projectile_damage			= 1;
-				projectile_knockback		= 1;
-				projectile_speed_max		= 5.0;
-				projectile_rotation_max		= 3.0;
-				projectile_acceleration		= 0.03;
-				projectile_sprite_id	= other.projectile_sprite_id;
-				projectile_sprite_frame	= other.rocket_type-1;
-				projectile_sprite_speed	= other.projectile_sprite_speed;
-				projectile_sprite_colour= other.projectile_sprite_colour;
-				explosion_sprite_id		= spr_explosion_effect_rocket3;
-				explosion_sprite_speed	= other.projectile_explosion_sprite_speed;
-				explosion_sprite_colour	= other.projectile_explosion_sprite_colour;
-				sprite_index			= other.projectile_sprite_id;
-				speed					= other.speed;				
-				image_angle				= other.image_angle;
-				direction				= other.image_angle;
-				depth					= other.depth - 1;
+			// Create rocket projectiles and set attributes.
+			for (var i = -1; i < 2; ++i) {
+				temp_target = ds_grid_get(target_list, 0, irandom_range(0, ds_grid_height(target_list)-1));
+				with (instance_create_layer(
+					x + lengthdir_x(16*i, direction+90), y + lengthdir_y(16*i, direction+90), 
+					"Instances", obj_rocket_basilisk)) 
+					{
+					creator					= other;		
+					faction					= other.faction;
+					if (other.homing_enabled) {projectile_target = other.temp_target;}
+					rocket_type				= 3;
+					projectile_hp			= other.projectile_hp;
+					projectile_damage			= 1;
+					knockback_send				= 1;
+					projectile_speed_max		= 5.0;
+					projectile_rotation_max		= 3.0;
+					projectile_acceleration		= 0.03;
+					projectile_sprite_id	= other.projectile_sprite_id;
+					projectile_sprite_frame	= other.rocket_type-1;
+					projectile_sprite_speed	= other.projectile_sprite_speed;
+					projectile_sprite_colour= other.projectile_sprite_colour;
+					explosion_sprite_id		= spr_explosion_effect_rocket3;
+					explosion_sprite_speed	= other.projectile_explosion_sprite_speed;
+					explosion_sprite_colour	= other.projectile_explosion_sprite_colour;
+					sprite_index			= other.projectile_sprite_id;
+					speed					= other.speed;				
+					image_angle				= other.image_angle;
+					direction				= other.image_angle;
+					depth					= other.depth - 1;
+				}
 			}
 		}
+		
+		//else if (rocket_type == 3 && attack_cooldown == false) {
+		//	// Create rocket projectile and set attributes.
+		//	with (instance_create_layer(x, y, "Instances", obj_rocket_basilisk)) {
+		//		creator					= other;		
+		//		faction					= other.faction;
+		//		if (other.homing_enabled) {projectile_target = other.projectile_target;}
+		//		rocket_type				= 3;
+		//		projectile_hp			= other.projectile_hp;
+		//		projectile_damage			= 1;
+		//		projectile_knockback		= 1;
+		//		projectile_speed_max		= 5.0;
+		//		projectile_rotation_max		= 3.0;
+		//		projectile_acceleration		= 0.03;
+		//		projectile_sprite_id	= other.projectile_sprite_id;
+		//		projectile_sprite_frame	= other.rocket_type-1;
+		//		projectile_sprite_speed	= other.projectile_sprite_speed;
+		//		projectile_sprite_colour= other.projectile_sprite_colour;
+		//		explosion_sprite_id		= spr_explosion_effect_rocket3;
+		//		explosion_sprite_speed	= other.projectile_explosion_sprite_speed;
+		//		explosion_sprite_colour	= other.projectile_explosion_sprite_colour;
+		//		sprite_index			= other.projectile_sprite_id;
+		//		speed					= other.speed;				
+		//		image_angle				= other.image_angle;
+		//		direction				= other.image_angle;
+		//		depth					= other.depth - 1;
+		//	}
+		//}
 		
 		// Play shoot audio.
 		audio_play_sound(SFX__FTL____Rocket_Shot__A_, 10, false);

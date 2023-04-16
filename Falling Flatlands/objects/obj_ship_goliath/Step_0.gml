@@ -48,7 +48,7 @@ if (input_space_hold) {
 			projectile_hp			= other.projectile_hp;
 			projectile_damage		= other.projectile_damage;
 			projectile_speed		= other.projectile_speed;
-			projectile_knockback	= other.projectile_knockback;
+			knockback_send			= other.projectile_knockback;
 			projectile_direction	= other.image_angle;
 			projectile_sprite_id	= other.projectile_sprite_id;
 			projectile_sprite_speed	= other.projectile_sprite_speed;

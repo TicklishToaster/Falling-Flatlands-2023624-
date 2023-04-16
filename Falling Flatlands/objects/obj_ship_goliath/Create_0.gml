@@ -21,7 +21,7 @@ iframes_timer			= iframes_timer_max;
 // Bullet Data
 projectile_hp			= 3; //1
 projectile_damage		= 3; //1
-projectile_speed		= 6; //7
+projectile_speed		= 7; //7
 projectile_knockback	= 2; //1
 
 projectile_sprite_id		= spr_laser_bullet_giant_grey;

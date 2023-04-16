@@ -1,3 +1,4 @@
+/// @description Buffer Shield Surface
 // Clear shield_surface after drawing to prevent image bleeding.
 if (surface_exists(shield_surface)) {
 	surface_set_target(shield_surface);

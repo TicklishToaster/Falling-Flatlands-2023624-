@@ -22,4 +22,3 @@ if (bbox_top > 0 && bbox_bottom < room_height && bbox_left > 0 && bbox_right < r
 		direction = image_angle;
 	}
 }
-

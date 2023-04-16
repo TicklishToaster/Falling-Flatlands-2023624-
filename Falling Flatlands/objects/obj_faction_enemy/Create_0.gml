@@ -14,6 +14,5 @@ image_blend = c_red;
 //exhaust_counter = 0;
 
 collision_damage_cooldown	= false;
-//collision_damage_timer_max	= 0.5;
-collision_damage_timer_max	= 1.0;
+collision_damage_timer_max	= 2.0;
 collision_damage_timer		= collision_damage_timer_max;
