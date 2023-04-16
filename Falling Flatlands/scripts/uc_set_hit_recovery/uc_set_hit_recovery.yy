@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Hit",
-    "path": "folders/Scripts/Ultimate Camera/Camera Effects/Hit.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Effects/Hit.yy",
   },
 }

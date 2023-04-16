@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Room bounds",
-    "path": "folders/Scripts/Ultimate Camera/Camera General Settings/Room bounds.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera General Settings/Room bounds.yy",
   },
 }

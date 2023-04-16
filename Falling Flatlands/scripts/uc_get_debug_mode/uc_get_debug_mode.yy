@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Getters",
-    "path": "folders/Scripts/Ultimate Camera/System/Debugging/Getters.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/System/Debugging/Getters.yy",
   },
 }

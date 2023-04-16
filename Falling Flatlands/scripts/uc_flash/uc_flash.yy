@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Flash",
-    "path": "folders/Scripts/Ultimate Camera/Camera Effects/Flash.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Effects/Flash.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mouse Borders",
-    "path": "folders/Scripts/Ultimate Camera/Camera Modes/Mouse Borders.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Modes/Mouse Borders.yy",
   },
 }

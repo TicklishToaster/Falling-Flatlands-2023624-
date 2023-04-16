@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "View and Window Size",
-    "path": "folders/Scripts/Ultimate Camera/Camera General Settings/View and Window Size.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera General Settings/View and Window Size.yy",
   },
 }

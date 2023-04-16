@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Movement and Behaviour",
-    "path": "folders/Scripts/Ultimate Camera/Movement and Behaviour.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Movement and Behaviour.yy",
   },
 }

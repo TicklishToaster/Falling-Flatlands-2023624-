@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mouse Drag",
-    "path": "folders/Scripts/Ultimate Camera/Camera Modes/Mouse Drag.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Modes/Mouse Drag.yy",
   },
 }

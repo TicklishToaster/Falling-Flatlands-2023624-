@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Getters",
-    "path": "folders/Scripts/Ultimate Camera/Camera General Settings/Room bounds/Getters.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera General Settings/Room bounds/Getters.yy",
   },
 }

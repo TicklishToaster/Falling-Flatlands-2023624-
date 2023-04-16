@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Scale and Auto-Scale",
-    "path": "folders/Scripts/Ultimate Camera/Camera General Settings/Scale and Auto-Scale.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera General Settings/Scale and Auto-Scale.yy",
   },
 }

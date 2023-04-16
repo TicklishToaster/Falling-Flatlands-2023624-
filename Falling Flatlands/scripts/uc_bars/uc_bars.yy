@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Bars",
-    "path": "folders/Scripts/Ultimate Camera/Camera Effects/Bars.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Effects/Bars.yy",
   },
 }

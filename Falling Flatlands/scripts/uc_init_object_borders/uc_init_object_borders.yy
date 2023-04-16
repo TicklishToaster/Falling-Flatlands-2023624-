@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Object Borders",
-    "path": "folders/Scripts/Ultimate Camera/Camera Modes/Object Borders.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Modes/Object Borders.yy",
   },
 }

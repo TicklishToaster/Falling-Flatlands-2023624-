@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Getters",
-    "path": "folders/Scripts/Ultimate Camera/Movement and Behaviour/Getters.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Movement and Behaviour/Getters.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Getters",
-    "path": "folders/Scripts/Ultimate Camera/Camera Modes/Static Mode/Getters.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Modes/Static Mode/Getters.yy",
   },
 }

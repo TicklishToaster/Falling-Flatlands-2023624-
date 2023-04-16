@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Inclination",
-    "path": "folders/Scripts/Ultimate Camera/Camera General Settings/Inclination.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera General Settings/Inclination.yy",
   },
 }

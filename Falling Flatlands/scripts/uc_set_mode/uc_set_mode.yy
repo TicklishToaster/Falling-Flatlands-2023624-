@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mode Management",
-    "path": "folders/Scripts/Ultimate Camera/Camera Modes/Mode Management.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Modes/Mode Management.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "System",
-    "path": "folders/Scripts/Ultimate Camera/System.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/System.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Static Mode",
-    "path": "folders/Scripts/Ultimate Camera/Camera Modes/Static Mode.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Modes/Static Mode.yy",
   },
 }

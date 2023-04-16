@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Mouse Shooter",
-    "path": "folders/Scripts/Ultimate Camera/Camera Modes/Mouse Shooter.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Modes/Mouse Shooter.yy",
   },
 }

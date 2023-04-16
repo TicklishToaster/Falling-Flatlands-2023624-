@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Debugging",
-    "path": "folders/Scripts/Ultimate Camera/System/Debugging.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/System/Debugging.yy",
   },
 }

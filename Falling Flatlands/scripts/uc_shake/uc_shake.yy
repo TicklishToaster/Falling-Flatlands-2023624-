@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Shake",
-    "path": "folders/Scripts/Ultimate Camera/Camera Effects/Shake.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Effects/Shake.yy",
   },
 }

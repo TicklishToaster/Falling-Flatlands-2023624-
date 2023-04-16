@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Object Following",
-    "path": "folders/Scripts/Ultimate Camera/Camera Modes/Object Following.yy",
+    "path": "folders/Scripts/Ultimate Camera Extension/Camera Modes/Object Following.yy",
   },
 }
