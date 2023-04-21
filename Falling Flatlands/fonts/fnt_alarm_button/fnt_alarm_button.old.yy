@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "fnt_text2",
+  "name": "fnt_alarm_button",
   "AntiAlias": 1,
   "applyKerning": 1,
   "ascender": 32,
