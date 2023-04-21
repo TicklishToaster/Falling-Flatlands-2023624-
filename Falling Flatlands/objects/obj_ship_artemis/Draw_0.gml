@@ -32,6 +32,20 @@ if (booster_charge_enable && !booster_charge_complete) {
 	}
 }
 
+// Draw boost trajectory line.
+if (!boost_mode) {
+	for (var i = 0; i < booster_charge_timer*16; ++i) {
+	    // code here
+		draw_set_alpha(clamp(booster_charge_timer/4, 0, 0.4));
+		draw_line_width(
+			x + lengthdir_x(i*16, image_angle),
+			y + lengthdir_y(i*16, image_angle),
+			x + lengthdir_x(i*16 + 8, image_angle),
+			y + lengthdir_y(i*16 + 8, image_angle), 
+			2);
+		draw_set_alpha(1.0);
+	}
+}
 
 // Draw Propusion Effects /////////////////////////////////////////////////////
 // Particle FX.

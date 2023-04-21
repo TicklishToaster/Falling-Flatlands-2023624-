@@ -9,3 +9,5 @@ if (attack_cooldown) {
 		attack_cooldown_timer = attack_cooldown_timer_max;
 	}
 }
+
+speed = 0;

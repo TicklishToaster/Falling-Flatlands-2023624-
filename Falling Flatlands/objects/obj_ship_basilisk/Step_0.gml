@@ -42,21 +42,21 @@ if (input_key1_press) {
 	rocket_type			= 1;
 	projectile_damage	= 3;
 	explosion_sprite_id = spr_explosion_effect_rocket1;
-	audio_play_sound(SFX__ITB____Basilisk_Rocket_1, 10, false, 0.5);
+	audio_play_sound(UI__FTL____Basilisk_Rocket, 10, false, 0.5);
 }
 // Switch to homing rocket.
 if (input_key2_press) {
 	rocket_type			= 2;		
 	projectile_damage	= 2;
 	explosion_sprite_id = spr_explosion_effect_rocket2;
-	audio_play_sound(SFX__ITB____Basilisk_Rocket_2, 10, false, 0.5);
+	audio_play_sound(UI__FTL____Basilisk_Rocket, 10, false, 0.5);
 }
 // Switch to blast rocket.
 if (input_key3_press) {
 	rocket_type			= 3;	
 	projectile_damage	= 1;
 	explosion_sprite_id = spr_explosion_effect_rocket3;
-	audio_play_sound(SFX__ITB____Basilisk_Rocket_3, 10, false, 0.5);
+	audio_play_sound(UI__FTL____Basilisk_Rocket, 10, false, 0.5);
 }
 
 //// Enable/disable rocket homing.
@@ -210,7 +210,7 @@ if (input_space_hold) {
 				explosion_sprite_speed	= other.projectile_explosion_sprite_speed;
 				explosion_sprite_colour	= other.projectile_explosion_sprite_colour;
 				sprite_index			= other.projectile_sprite_id;
-				speed					= other.speed;				
+				speed					= other.speed+2;				
 				image_angle				= other.image_angle;
 				direction				= other.image_angle;
 				depth					= other.depth - 1;
@@ -225,11 +225,11 @@ if (input_space_hold) {
 				if (other.homing_enabled) {projectile_target = other.projectile_target;}
 				rocket_type				= 2;
 				projectile_hp			= other.projectile_hp;
-				projectile_damage			= 2;
+				projectile_damage			= 3;
 				knockback_send				= 2;
 				projectile_speed_max		= 5.0;
-				projectile_rotation_max		= 3.0;
-				projectile_acceleration		= 0.03;
+				projectile_rotation_max		= 3.0*2;
+				projectile_acceleration		= 0.03*2;
 				projectile_sprite_id	= other.projectile_sprite_id;
 				projectile_sprite_frame	= other.rocket_type-1;
 				projectile_sprite_speed	= other.projectile_sprite_speed;
@@ -272,8 +272,8 @@ if (input_space_hold) {
 					explosion_sprite_colour	= other.projectile_explosion_sprite_colour;
 					sprite_index			= other.projectile_sprite_id;
 					speed					= other.speed;				
-					image_angle				= other.image_angle;
-					direction				= other.image_angle;
+					image_angle				= other.image_angle + 15*i;
+					direction				= other.image_angle + 15*i;
 					depth					= other.depth - 1;
 				}
 			}

@@ -10,6 +10,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_projectile","path":"objects/obj_projectile/obj_projectile.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -37,6 +38,7 @@
   "properties": [
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"knockback_send","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1.00","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"knockback_take","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1.00","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"enemy_colour_blend","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"$FF0000FF","varType":7,},
   ],
   "solid": false,
   "spriteId": null,

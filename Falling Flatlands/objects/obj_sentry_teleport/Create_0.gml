@@ -36,7 +36,7 @@ gun_angles_previous = [
 	];
 
 // Bullet Data
-projectile_hp		= 3;
+projectile_hp		= 1;
 projectile_damage	= 1;
 projectile_speed	= 5;
 projectile_knockback= 2;

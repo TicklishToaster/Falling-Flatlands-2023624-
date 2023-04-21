@@ -10,10 +10,13 @@ if (health_points >= 1) {
 	SFX__FTL____Energy_Shot_Impact__B_,
 	SFX__FTL____Energy_Shot_Impact__C_), 
 	10, false);	
+	
+	audio_stop_sound(SFX__FTL____Enemy_Swarmer_Shot_Impact);
+	audio_play_sound(SFX__FTL____Enemy_Swarmer_Shot_Impact, 10, false, 0.5);
 }
 
 // Destroy swarmers in proportion to remaining heatlh points.
-for (var i = 0; i < clamp(health_points_max - health_points, 0, health_points_max)*5; ++i) {
+for (var i = 0; i < swarmer_coefficient*clamp(health_points_max - health_points, 0, health_points_max); ++i) {
 	if (instance_exists(array_get(swarmer_childen, i))) {
 		// Create swarmer debris.		
 		with(obj_particles){	
@@ -26,7 +29,7 @@ for (var i = 0; i < clamp(health_points_max - health_points, 0, health_points_ma
 			part_type_alpha3(		part_type_swarmer_debris, 0.6, 0.6, 0);			
 			part_particles_create_color(particle_system, 
 				array_get(other.swarmer_childen, i).x, array_get(other.swarmer_childen, i).y, 
-				part_type_swarmer_debris, other.swarmer_colour, 2);
+				part_type_swarmer_debris, other.enemy_colour_blend, 2);
 		}
 		instance_destroy(array_get(swarmer_childen, i));		
 	}

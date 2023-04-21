@@ -41,29 +41,33 @@ speed = clamp(speed, 0, max_speed);
 // Fire ship weapon.
 if (input_space_hold) {
 	if (attack_cooldown == false) {
-		// Create projectile and set attributes.
-		with (instance_create_layer(x, y, "Instances", obj_projectile)) {	
-			creator					= other;		
-			faction					= other.faction;
-			projectile_hp			= other.projectile_hp;
-			projectile_damage		= other.projectile_damage;
-			projectile_speed		= other.projectile_speed;
-			knockback_send			= other.projectile_knockback;
-			projectile_direction	= other.image_angle;
-			projectile_sprite_id	= other.projectile_sprite_id;
-			projectile_sprite_speed	= other.projectile_sprite_speed;
-			projectile_sprite_colour= other.projectile_sprite_colour;
-			explosion_sprite_id		= other.projectile_explosion_sprite_id;
-			explosion_sprite_speed	= other.projectile_explosion_sprite_speed;
-			explosion_sprite_colour	= other.projectile_explosion_sprite_colour;
-			sprite_index			= projectile_sprite_id;
-			speed					= projectile_speed;
-			direction				= projectile_direction;
-			depth					= other.depth - 1;
-			x						+= lengthdir_x(other.speed*8, other.direction);
-			y						+= lengthdir_y(other.speed*8, other.direction);
+		var n = 0;
+		
+		for (var i = -floor(attack_spread/2); i < floor(attack_spread/2) + 1; ++i) {
+			// Create projectile and set attributes.
+			with (instance_create_layer(x, y, "Instances", obj_projectile)) {	
+				creator					= other;		
+				faction					= other.faction;
+				projectile_hp			= other.projectile_hp;
+				projectile_damage		= other.projectile_damage;
+				projectile_speed		= other.projectile_speed;
+				knockback_send			= other.projectile_knockback;
+				projectile_direction	= other.image_angle + i*15;
+				projectile_sprite_id	= other.projectile_sprite_id;
+				projectile_sprite_speed	= other.projectile_sprite_speed;
+				projectile_sprite_colour= other.projectile_sprite_colour;
+				explosion_sprite_id		= other.projectile_explosion_sprite_id;
+				explosion_sprite_speed	= other.projectile_explosion_sprite_speed;
+				explosion_sprite_colour	= other.projectile_explosion_sprite_colour;
+				sprite_index			= projectile_sprite_id;
+				speed					= projectile_speed;
+				direction				= projectile_direction;
+				depth					= other.depth - 1;
+				x						+= lengthdir_x(other.speed*8, other.direction);
+				y						+= lengthdir_y(other.speed*8, other.direction);
+			}
 		}
-
+		
 		// Play shoot audio.
 		audio_play_sound(choose(
 		SFX__FTL____Energy_Shot_Light__A_,

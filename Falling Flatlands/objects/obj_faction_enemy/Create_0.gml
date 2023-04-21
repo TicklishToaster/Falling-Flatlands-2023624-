@@ -5,8 +5,9 @@ faction = factions.enemy;
 projectile_collisions = [noone];
 
 image_blend = c_red;
-
-
+if (instance_exists(obj_faction_player)) {
+	depth = obj_faction_player.depth - 1;
+}
 
 //image_speed = 0;
 

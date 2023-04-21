@@ -12,7 +12,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_faction_player","path":"objects/obj_faction_player/obj_faction_player.yy",},"propertyId":{"name":"knockback_take","path":"objects/obj_faction_player/obj_faction_player.yy",},"value":"0.50",},
+  ],
   "parent": {
     "name": "Faction Player",
     "path": "folders/Objects/Faction Player.yy",
@@ -40,8 +42,8 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"shield_enabled_timer_max","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"2","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"shield_recharge_timer_max","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"3","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"iframes_timer_max","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"max_speed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"6-1","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"acceleration","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.10 - 0.05","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"max_speed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"5","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"acceleration","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.10 - 0.05 + 0.03","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"rotation_speed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"3","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"attack_cooldown_timer_max","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.5","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"booster_charge_timer_max","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"2","varType":0,},

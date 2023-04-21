@@ -11,7 +11,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_faction_player","path":"objects/obj_faction_player/obj_faction_player.yy",},"propertyId":{"name":"knockback_take","path":"objects/obj_faction_player/obj_faction_player.yy",},"value":"0.50",},
+  ],
   "parent": {
     "name": "Faction Player",
     "path": "folders/Objects/Faction Player.yy",

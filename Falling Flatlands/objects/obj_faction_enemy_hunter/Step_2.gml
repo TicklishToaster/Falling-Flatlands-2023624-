@@ -3,11 +3,7 @@ event_inherited();
 
 
 // If enemy is not onscreen then exit this event and nullify the potentially expensive processes below.
-var border_x1 = uc_get_view_x() - Camera.camera_width  / 5;
-var border_y1 = uc_get_view_y() - Camera.camera_height / 5;
-var border_x2 = uc_get_view_x() + Camera.camera_width  / 5 + Camera.camera_width;
-var border_y2 = uc_get_view_y() + Camera.camera_height / 5 + Camera.camera_height;
-if (!point_in_rectangle(x, y, border_x1, border_y1, border_x2, border_y2)) {
+if (!point_in_rectangle(x, y, Camera.border_x1, Camera.border_y1, Camera.border_x2, Camera.border_y2)) {
 	exit;
 }
 
@@ -47,9 +43,9 @@ if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagemen
 
 		// Play shoot audio.
 		audio_play_sound(choose(
-		SFX__FTL____Energy_Shot_Light__A_,
-		SFX__FTL____Energy_Shot_Light__B_,
-		SFX__FTL____Energy_Shot_Light__C_), 
+		SFX__FTL____Enemy_Hunter_Shot__A_,
+		SFX__FTL____Enemy_Hunter_Shot__B_,
+		SFX__FTL____Enemy_Hunter_Shot__C_), 
 		10, false);
 	
 		// Enable attack cooldown.

@@ -10,27 +10,27 @@ if (tele_timer == 0) {
 draw_sprite_ext(
 	spr_enemy_sentry_hull, (sprite_get_number(sprite_index)) - health_points, 
 	//x, y, 1, 1, 0, c_red, 1);
-	x, y, 1, 1, 0, c_red, 
+	x, y, 1, 1, 0, enemy_colour_blend, 
 	clamp(tele_timer, 0, 1));
 	
 // Draw sentry gun sprites.
 for (var i = 0; i < array_length(gun_angles); i += 1) {
 	draw_sprite_ext(spr_enemy_sentry_gun, 2, 
 	//x, y, 1, 1, gun_angles[i], c_red, 1);
-	x, y, 1, 1, gun_angles[i], c_red, 
+	x, y, 1, 1, gun_angles[i], enemy_colour_blend, 
 	clamp(tele_timer, 0, 1));
 }
 
 // Draw sentry hull afterimage sprite.
 draw_sprite_ext(
 	spr_enemy_sentry_hull, (sprite_get_number(sprite_index)) - health_points, 
-	previous_x, previous_y, 1, 1, 0, c_red, 
+	previous_x, previous_y, 1, 1, 0, enemy_colour_blend, 
 	clamp(1-tele_timer, 0, 1));
 	
 // Draw sentry gun afterimage sprites.
 for (var i = 0; i < array_length(gun_angles_previous); i += 1) {
 	draw_sprite_ext(spr_enemy_sentry_gun, 2, 
-	previous_x, previous_y, 1, 1, gun_angles_previous[i], c_red, 
+	previous_x, previous_y, 1, 1, gun_angles_previous[i], enemy_colour_blend, 
 	clamp(1-tele_timer, 0, 1));
 }
 
@@ -71,11 +71,3 @@ if (teleport_fired) {
 		}
 	}
 }
-
-
-//// DEBUG
-//var border_x1 = uc_get_view_x() + sprite_width  / 2;
-//var border_y1 = uc_get_view_y() + sprite_height / 2;
-//var border_x2 = uc_get_view_x() - sprite_width  / 2 + Camera.camera_width;
-//var border_y2 = uc_get_view_y() - sprite_height / 2 + Camera.camera_height;
-//draw_rectangle(border_x1, border_y1, border_x2, border_y2, true)

@@ -11,3 +11,5 @@ if(exhaust_counter >= 4){
 		part_particles_create(particle_system, xx, yy, part_type_ship_exhaust, 1);
 	}
 }
+
+//draw_circle(x, y, sprite_get_width(explosion_sprite_id), true)

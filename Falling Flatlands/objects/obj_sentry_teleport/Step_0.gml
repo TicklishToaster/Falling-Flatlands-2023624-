@@ -1,26 +1,9 @@
 // Inherit the parent event
 event_inherited();
 
-
-//// Determine the angle required to face the target ship.
-//var new_angle = point_direction(x, y, obj_faction_player.x, obj_faction_player.y);
-	
-//// Calculate the closest angle required to face the target (clock-wise or anti clock-wise).
-//new_angle = angle_difference(new_angle, gun_angle);
-	
-//// Rotate ship gun toward new angle at set turn speed.
-//gun_angle += clamp(new_angle, -rotation_speed, rotation_speed);
-
-
 if (!teleport_cooldown) {
 	teleport_cooldown = true;
 	teleport_ring = true;
-	//show_debug_message(gun_angles)
-	//show_debug_message(gun_angles_previous)
-	//gun_angles_previous = gun_angles;
-	//show_debug_message("")
-	//show_debug_message(gun_angles)
-	//show_debug_message(gun_angles_previous)
 	
 	// Calculate a set of 8 new angles for each gun to point towards.
 	var n = 15;
@@ -42,31 +25,23 @@ if (!teleport_cooldown) {
 			}
 			
 			if (!invalid_angle) {
-				//var last_angle = gun_angles[i];
-				//gun_angles_previous[i] = last_angle;
 				gun_angles[i] = new_angle;
 			}
 		}
 	}
-	
-	// Determine a range of positions in view of the camera.
-	var border_x1 = uc_get_view_x() + sprite_width  / 2;
-	var border_y1 = uc_get_view_y() + sprite_height / 2;
-	var border_x2 = uc_get_view_x() - sprite_width  / 2 + Camera.camera_width;
-	var border_y2 = uc_get_view_y() - sprite_height / 2 + Camera.camera_height;
-	
+		
 	// Randomise a position in camera range to teleport to.
-	teleport_x = irandom_range(border_x1, border_x2);
-	teleport_y = irandom_range(border_y1, border_y2);
+	teleport_x = irandom_range(Camera.border_x1+sprite_width , Camera.border_x2-sprite_width );
+	teleport_y = irandom_range(Camera.border_y1+sprite_height, Camera.border_y2-sprite_height);
 	
 	// Ensure the teleport position does not overlap with an existing object.
 	while (collision_rectangle(
-		teleport_x-sprite_width/2, teleport_y-sprite_height/2, 
-		teleport_x+sprite_width/2, teleport_y+sprite_height/2, 
-		obj_faction, false, true)) 
+		teleport_x, teleport_y, 
+		teleport_x, teleport_y, 
+		obj_faction, false, true))
 		{
-		teleport_x = irandom_range(border_x1, border_x2);
-		teleport_y = irandom_range(border_y1, border_y2);		
+		teleport_x = irandom_range(Camera.border_x1+sprite_width , Camera.border_x2-sprite_width );
+		teleport_y = irandom_range(Camera.border_y1+sprite_height, Camera.border_y2-sprite_height);
 	}
 	
 	// Set new teleport position.

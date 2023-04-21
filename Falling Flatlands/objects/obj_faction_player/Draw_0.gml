@@ -24,17 +24,9 @@ draw_sprite_ext(shield_sprite, 0,
 
 // Draw shield impact effects.
 for (var i = 0; i < array_length(collision_detection_data); i += 1) {
+	//if (collision_detection_data[i][5]-4 > 0 && collision_detection_data[i][7] == true ) {
 	if (collision_detection_data[i][5]-4 > 0 && collision_detection_data[i][7] == true ) {
-		// Interpolate the position to draw shield impact sprite (relative to shield surface).		
-		//var camera_length = uc_get_view_x()
-		//var camera_height = uc_get_view_y()
-		//var camera_center_x = camera_get_view_width(view_camera[0])/2;
-		//var camera_center_y = camera_get_view_height(view_camera[0])/2;
-		//var offset_x = collision_detection_data[0][0] - camera_length;
-		//var offset_y = collision_detection_data[0][1] - camera_height;
-		//var surface_x = offset_x - (Camera.camera_width /2) + sprite_get_xoffset(shield_sprite) - (x - (uc_get_view_x() + Camera.camera_width /2));
-		//var surface_y = offset_y - (Camera.camera_height/2) + sprite_get_yoffset(shield_sprite) - (y - (uc_get_view_y() + Camera.camera_height/2));
-		
+		// Interpolate the position to draw shield impact sprite (relative to shield surface).
 		var offset_x = collision_detection_data[i][0] - uc_get_view_x();
 		var offset_y = collision_detection_data[i][1] - uc_get_view_y();
 		var surface_x = offset_x + sprite_get_xoffset(shield_sprite) - (x - uc_get_view_x());

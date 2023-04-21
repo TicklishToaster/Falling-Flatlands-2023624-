@@ -28,18 +28,18 @@ if (other.faction != faction) {
 		// Append a boolean condition for later use.
 		array_set(collision_detection_data[array_length(collision_detection_data)-1], 7, true);
 		
-		// Apply effects if shield effect cooldown is currently disabled.
-		if (!shield_effect_cooldown) {
-			// Set shield effect cooldown to true to prevent it triggering on every frame.
-			shield_effect_cooldown = true;			
+		//// Apply effects if shield effect cooldown is currently disabled.
+		//if (!shield_effect_cooldown) {
+		//	// Set shield effect cooldown to true to prevent it triggering on every frame.
+		//	shield_effect_cooldown = true;			
 			
-			// Play shield impact audio.
-			audio_play_sound(choose(
-			SFX__FTL____Shield_Hit_Impact__A_,
-			SFX__FTL____Shield_Hit_Impact__B_,
-			SFX__FTL____Shield_Hit_Impact__C_), 
-			10, false);
-		}		
+		// Play shield impact audio.
+		audio_play_sound(choose(
+		SFX__FTL____Shield_Hit_Impact__A_,
+		SFX__FTL____Shield_Hit_Impact__B_,
+		SFX__FTL____Shield_Hit_Impact__C_), 
+		10, false);
+		//}		
 		
 		// Call knockback event.
 		event_user(1);

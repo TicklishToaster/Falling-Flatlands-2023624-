@@ -19,7 +19,7 @@ attack_cooldown_timer	= attack_cooldown_timer_max;
 iframes_timer			= iframes_timer_max;
 
 // Bullet Data
-projectile_hp			= 3; //1
+projectile_hp			= 5; //3
 projectile_damage		= 3; //1
 projectile_speed		= 7; //7
 projectile_knockback	= 2; //1

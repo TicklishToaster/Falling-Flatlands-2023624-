@@ -9,3 +9,10 @@ event_inherited();
 //		direction = image_angle;
 //	}
 //}
+
+
+// Collision damage cooldown (dealt).
+collider_timer = clamp(collider_timer - 1, 0, 20);
+if (collider_timer <= 0) {
+	last_collider = noone;
+}

@@ -9,7 +9,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_faction_enemy","path":"objects/obj_faction_enemy/obj_faction_enemy.yy",},"propertyId":{"name":"enemy_colour_blend","path":"objects/obj_faction_enemy/obj_faction_enemy.yy",},"value":"$FF3232FF",},
+  ],
   "parent": {
     "name": "Sentry",
     "path": "folders/Objects/Faction Enemy/Sentry.yy",

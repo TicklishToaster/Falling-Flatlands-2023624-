@@ -14,6 +14,7 @@ shield_recharge_timer	= shield_recharge_timer_max;
 
 // Attack
 attack_cooldown_timer	= attack_cooldown_timer_max;
+collider_timer			= 20;
 
 // Movement
 //max_speed_current		= 10;	// 6

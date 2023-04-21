@@ -41,10 +41,12 @@ if (!boost_mode) {
 			// Play audio clip for starting charge.
 			audio_play_sound(SFX__ITB____Artemis_Charge_Pulse_Start, 10, false, 0.5);			
 		}
+		
+		rotation_speed = 3 - booster_charge_timer;
 	
 		// Countdown booster charge.
 		if (booster_charge_enable && !booster_charge_complete) {
-			booster_charge_timer = clamp(booster_charge_timer + (room_speed / 60 / 60), 0, booster_charge_timer_max);
+			booster_charge_timer = clamp(booster_charge_timer + (room_speed / 60 / 60)*2, 0, booster_charge_timer_max);
 			
 			// Toggle booster charge as complete.
 			if (booster_charge_timer >= booster_charge_timer_max && !booster_charge_complete) {
@@ -58,8 +60,9 @@ if (!boost_mode) {
 	
 	// Cancel boost charge.
 	if (!input_shift_hold) {
+		rotation_speed = 3;		
 		if (booster_charge_enable && booster_charge_timer < booster_charge_timer_max/4) {			
-			booster_charge_timer = clamp(booster_charge_timer - (room_speed / 60 / 60), 0, booster_charge_timer_max);
+			booster_charge_timer = clamp(booster_charge_timer - (room_speed / 60 / 60)*2, 0, booster_charge_timer_max);
 			if (booster_charge_timer <= 0) {
 				booster_charge_enable = false;
 			}
@@ -76,44 +79,40 @@ if (!boost_mode) {
 			max_speed = max_speed_boosted;
 
 			// Reset and apply new motion to the ship.
+			rotation_speed = 3;
 			motion_set(image_angle, max(0.1, speed));
 			motion_add(image_angle, speed * booster_charge_timer);
 			speed = clamp(max_speed_default + (max_speed_default * booster_charge_timer/booster_charge_timer_max), 0, max_speed_boosted);
 			
-			// Play audio clip for launching when below full charge. 
-			audio_play_sound(SFX__ITB____Artemis_Launch_Normal, 10, false, 0.5);
+			// Play audio clip for launching when below full charge.
+			if (!booster_charge_complete) {
+				audio_play_sound(SFX__ITB____Artemis_Launch_Normal, 10, false, 0.5);
+			}
 			
-			//// Play audio clip for launching when below full charge. 
-			//if (!booster_charge_complete) {
-			//	audio_play_sound(SFX__ITB____Artemis_Launch_Normal, 10, false, 0.5);
-			//}
-			
-			//// Play audio clip for launching when at full charge. 
-			//if (booster_charge_complete) {				
-			//	audio_play_sound(SFX__ITB____Artemis_Launch_Charged, 10, false, 0.5);
-				
-			//	// Toggle charge complete to false.
-			//	booster_charge_complete = false;
-			//}
+			// Play audio clip for launching when at full charge. 
+			if (booster_charge_complete) {
+				audio_play_sound(SFX__ITB____Artemis_Launch_Charged, 10, false, 0.5);
+				booster_charge_complete = false;				
+			}
 		}
 	}
 	
-	// Automatically release boost charge when at full charge.
-	else if (booster_charge_complete && !boost_mode) {
-			// Set booster variables.
-			booster_charge_enable = false;
-			booster_charge_complete = false;			
-			boost_mode = true;
-			max_speed = max_speed_boosted;
+	//// Automatically release boost charge when at full charge.
+	//else if (booster_charge_complete && !boost_mode) {
+	//		// Set booster variables.
+	//		booster_charge_enable = false;
+	//		booster_charge_complete = false;			
+	//		boost_mode = true;
+	//		max_speed = max_speed_boosted;
 
-			// Reset and apply new motion to the ship.
-			motion_set(image_angle, max(0.1, speed));
-			motion_add(image_angle, speed * booster_charge_timer);
-			speed = clamp(max_speed_default + (max_speed_default * booster_charge_timer/booster_charge_timer_max), 0, max_speed_boosted);
+	//		// Reset and apply new motion to the ship.
+	//		motion_set(image_angle, max(0.1, speed));
+	//		motion_add(image_angle, speed * booster_charge_timer);
+	//		speed = clamp(max_speed_default + (max_speed_default * booster_charge_timer/booster_charge_timer_max), 0, max_speed_boosted);
 			
-			// Play audio clip for launching when at full charge. 
-			audio_play_sound(SFX__ITB____Artemis_Launch_Charged, 10, false, 0.5);
-	}
+	//		// Play audio clip for launching when at full charge. 
+	//		audio_play_sound(SFX__ITB____Artemis_Launch_Charged, 10, false, 0.5);
+	//}
 }
 #endregion
 
@@ -125,7 +124,7 @@ if (boost_mode) {
 	booster_charge_timer = clamp((speed - max_speed_default)/(max_speed_default/2), 0, booster_charge_timer_max);
 
 	// Gradually decelerate ship during boost mode.
-	speed = clamp(speed-acceleration/4, 0, speed);		
+	speed = clamp(speed-acceleration/2, 0, speed);		
 		
 	// Further decelerate ship during boost mode.
 	if (input_down_hold) {

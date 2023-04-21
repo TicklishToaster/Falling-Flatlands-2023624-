@@ -1,3 +1,6 @@
+// Inherit the parent event
+event_inherited();
+
 // Assign Points
 score += destroy_score;
 
@@ -5,10 +8,11 @@ score += destroy_score;
 uc_shake(1, 0.1);
 
 // Play destroy audio clip.
-audio_play_sound(SFX__FTL____Enemy_Destroy__C_, 10, false);
+audio_stop_sound(SFX__FTL____Enemy_Destroy__B_);
+audio_play_sound(SFX__FTL____Enemy_Destroy__B_, 10, false);
 
 // Destroy all remaining swarmers.
-for (var i = 0; i < health_points_max*5; ++i) {
+for (var i = 0; i < swarmer_coefficient*health_points_max; ++i) {
 	if (instance_exists(array_get(swarmer_childen, i))) {
 		// Create swarmer debris.		
 		with(obj_particles){	

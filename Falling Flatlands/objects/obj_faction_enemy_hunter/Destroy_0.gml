@@ -1,3 +1,6 @@
+// Inherit the parent event
+event_inherited();
+
 // Create Debris
 var xx = x;
 var yy = y;
@@ -13,4 +16,5 @@ score += destroy_score;
 uc_shake(1, 0.1);
 
 // Play destroy audio clip.
+audio_stop_sound(SFX__FTL____Enemy_Destroy__C_);
 audio_play_sound(SFX__FTL____Enemy_Destroy__C_, 10, false);

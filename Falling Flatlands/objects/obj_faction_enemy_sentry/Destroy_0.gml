@@ -1,3 +1,6 @@
+// Inherit the parent event
+event_inherited();
+
 // Create Debris
 var xx = x;
 var yy = y;
@@ -11,4 +14,7 @@ score += destroy_score;
 
 // Toggle Camera Shake
 uc_shake(4, 0.1);
-audio_play_sound(SFX__FTL____Enemy_Destroy__C_, 10, false);
+
+// Play destroy audio clip.
+audio_stop_sound(SFX__FTL____Enemy_Destroy__A_);
+audio_play_sound(SFX__FTL____Enemy_Destroy__A_, 10, false);

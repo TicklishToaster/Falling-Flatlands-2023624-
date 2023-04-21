@@ -55,3 +55,20 @@ hotspot_y = y;
 // Adjust parallax scrolling values.
 Camera.background_shift_x += hspeed/4;
 Camera.background_shift_y += vspeed/4;
+
+//// Pause all activity if the game menu is open.
+//if (obj_menu.menu_active) {
+//	//obj_menu.instance_layer_activation = false;
+//	instance_deactivate_object(self);
+	
+//	//instance_deactivate_layer("Instances");
+//	//instance_deactivate_object(obj_faction);
+//}
+
+//// Unpause activity if the game menu is closed.
+//else if (!obj_menu.menu_active) {
+//	//obj_menu.instance_layer_activation = true;
+//	instance_activate_object(self);
+		
+//}
+

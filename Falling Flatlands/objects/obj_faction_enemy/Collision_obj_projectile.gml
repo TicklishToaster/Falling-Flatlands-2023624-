@@ -1,7 +1,11 @@
 /// @description Team Damage Enabled
-
 // Inherit the parent event
 event_inherited();
+
+// If current object is not onscreen then exit this event and nullify the potentially expensive processes below.
+if (!point_in_rectangle(x, y, Camera.border_x1, Camera.border_y1, Camera.border_x2, Camera.border_y2)) {
+	exit;
+}
 
 // Check for exit conditions.
 for (var i = 0; i < array_length(projectile_collisions); i += 1) {
@@ -22,21 +26,37 @@ if (object_is_ancestor(object_index, obj_faction_enemy_charger)) {
 	exit;
 }
 
-// If the colliding projectile is hostile to current faction.
-if (other.faction != faction) {
-	// Append colliding projectile to projectile collisions array.
-	array_push(projectile_collisions, other)
+// Append colliding projectile to projectile collisions array.
+array_push(projectile_collisions, other)
 	
-	// Set variables in the newly registered projectile.
-	other.collider = self;
-	other.projectile_hp -= 1;
-	with (other) {event_user(0);}
+// Set variables in the newly registered projectile.
+other.collider = self;
+other.projectile_hp -= 1;
+with (other) {event_user(0);}
 		
-	// Apply damage and knockback.
-	take_damage = other.projectile_damage;
-	// Call damage event.
-	event_user(0);
+// Apply damage and knockback.
+take_damage = other.projectile_damage;
+// Call damage event.
+event_user(0);
 		
-	// Call knockback event.
-	event_user(1);
-}
+// Call knockback event.
+event_user(1);
+
+//// If the colliding projectile is hostile to current faction.
+//if (other.faction != faction) {
+//	// Append colliding projectile to projectile collisions array.
+//	array_push(projectile_collisions, other)
+	
+//	// Set variables in the newly registered projectile.
+//	other.collider = self;
+//	other.projectile_hp -= 1;
+//	with (other) {event_user(0);}
+		
+//	// Apply damage and knockback.
+//	take_damage = other.projectile_damage;
+//	// Call damage event.
+//	event_user(0);
+		
+//	// Call knockback event.
+//	event_user(1);
+//}
