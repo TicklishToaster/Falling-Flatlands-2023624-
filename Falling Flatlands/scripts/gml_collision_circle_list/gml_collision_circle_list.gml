@@ -1,11 +1,11 @@
-/// @description  collision_circle_list(x1,y1,radius,obj,prec,notme)
+/// @description  gml_collision_circle_list(x1,y1,radius,obj,prec,notme)
 /// @param x1
 /// @param y1
 /// @param radius
 /// @param obj
 /// @param prec
 /// @param notme
-function collision_circle_list(argument0, argument1, argument2, argument3, argument4, argument5) {
+function gml_collision_circle_list(argument0, argument1, argument2, argument3, argument4, argument5) {
 	//
 	//  Returns a list data structure populated with the ids of instances 
 	//  colliding with a given circle, or noone if no instances found.

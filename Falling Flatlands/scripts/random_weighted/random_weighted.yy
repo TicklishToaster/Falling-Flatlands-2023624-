@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "spawn_bullet",
+  "name": "random_weighted",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

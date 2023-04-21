@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "collision_circle_list",
+  "name": "gml_collision_circle_list",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
