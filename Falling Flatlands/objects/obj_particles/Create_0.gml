@@ -56,13 +56,13 @@ part_type_direction(	part_type_ship_debris, 0, 359, 0, false);
 part_type_orientation(	part_type_ship_debris, 0, 359, 1, false, false);
 part_type_alpha3(		part_type_ship_debris, 0.6, 0.6, 0);
 
-part_type_asteroid_debris = part_type_create();
-part_type_sprite(		part_type_asteroid_debris, spr_asteroid_debris, false, false, true);
-part_type_life(			part_type_asteroid_debris, 60, 80);
-part_type_speed(		part_type_asteroid_debris, 2, 2.5, -0.02, 0);
-part_type_direction(	part_type_asteroid_debris, 0, 359, 0, false);
-part_type_orientation(	part_type_asteroid_debris, 0, 359, 1, false, false);
-part_type_alpha3(		part_type_asteroid_debris, 0.8, 0.8, 0);
+//part_type_asteroid_debris = part_type_create();
+//part_type_sprite(		part_type_asteroid_debris, spr_asteroid_debris, false, false, true);
+//part_type_life(			part_type_asteroid_debris, 60, 80);
+//part_type_speed(		part_type_asteroid_debris, 2, 2.5, -0.02, 0);
+//part_type_direction(	part_type_asteroid_debris, 0, 359, 0, false);
+//part_type_orientation(	part_type_asteroid_debris, 0, 359, 1, false, false);
+//part_type_alpha3(		part_type_asteroid_debris, 0.8, 0.8, 0);
 
 
 // Ship Charge

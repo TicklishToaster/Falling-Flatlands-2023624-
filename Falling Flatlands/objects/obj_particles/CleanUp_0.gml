@@ -2,5 +2,11 @@ part_system_destroy(particle_system);
 
 part_type_destroy(part_type_ship_exhaust);
 part_type_destroy(part_type_enemy_exhaust);
+part_type_destroy(part_type_ship_exhaust_large);
 part_type_destroy(part_type_ship_debris);
-part_type_destroy(part_type_asteroid_debris);
+part_type_destroy(part_type_sentry_exhaust);
+part_type_destroy(part_type_sentry_ring);
+part_type_destroy(part_type_swarmer_image);
+part_type_destroy(part_type_swarmer_debris);
+part_type_destroy(part_type_charge_charger);
+part_type_destroy(part_type_charge_artemis);
