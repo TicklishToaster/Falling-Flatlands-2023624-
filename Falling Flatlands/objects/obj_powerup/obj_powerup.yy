@@ -4,13 +4,14 @@
   "name": "obj_powerup",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Miscellaneous",
-    "path": "folders/Objects/OLD/Miscellaneous.yy",
+    "name": "Miscellaneous Objects",
+    "path": "folders/Objects/Miscellaneous Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -29,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_powerup_icons",
-    "path": "sprites/spr_powerup_icons/spr_powerup_icons.yy",
+    "name": "spr_powerups",
+    "path": "sprites/spr_powerups/spr_powerups.yy",
   },
   "spriteMaskId": null,
   "visible": true,
