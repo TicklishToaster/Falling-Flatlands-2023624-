@@ -3,11 +3,13 @@ if (!obj_menu.menu_active || room != rm_start) {
 	exit;
 }
 
-if (point_in_rectangle(mouse_x, mouse_y, x, y, x + box_width, y + box_height) && temp_selected == false) {
+if (point_in_rectangle(mouse_x, mouse_y, x, y, x + box_width, y + box_height) && temp_selected == false &&
+	level_selected == true && ship_selected == true) {
 	temp_selected = true;
 	audio_play_sound(UI__ITB____Selection_Set, 10, false, 0.5);
 }
-else if (!point_in_rectangle(mouse_x, mouse_y, x, y, x + box_width, y + box_height) && temp_selected == true) {
+else if (!point_in_rectangle(mouse_x, mouse_y, x, y, x + box_width, y + box_height) && temp_selected == true &&
+	level_selected == true && ship_selected == true) {
 	temp_selected = false;
 }
 
