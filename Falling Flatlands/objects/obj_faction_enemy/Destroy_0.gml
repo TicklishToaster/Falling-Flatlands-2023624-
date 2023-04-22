@@ -1,6 +1,6 @@
 /// @description Drop Powerup
 
-var chance = irandom_range(1, 20); // 10
+var chance = irandom_range(1, 10); // 10
 
 if (chance == 1) {
 	var powerup = instance_create_layer(x, y, "Instances", obj_powerup);

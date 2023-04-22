@@ -112,7 +112,7 @@ if (charge_enable && charge_complete) {
 	charge_enable = false;
 	charge_complete = false;
 	charge_timer = charge_timer_max;
-	knockback_send = 4;
+	knockback_send = 2;
 	knockback_take = 0;
 		
 	// Reset and apply new motion to the ship.
