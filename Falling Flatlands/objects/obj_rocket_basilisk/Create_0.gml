@@ -11,4 +11,6 @@ projectile_rotation		= 0.5;
 projectile_acceleration	= 0;
 exhaust_counter			= 0;
 
+rotation_offset = 0;
+
 //blast_list = ds_list_create();

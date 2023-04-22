@@ -1,5 +1,6 @@
 // Destroy projectile if it goes beyond the camera boundaries.
-if (!point_in_rectangle(x, y, Camera.border_x1, Camera.border_y1, Camera.border_x2, Camera.border_y2)) {
+var n = 96;
+if (!point_in_rectangle(x, y, Camera.border_x1 - n, Camera.border_y1 - n, Camera.border_x2 + n, Camera.border_y2 + n)) {
 	instance_destroy(self, false);
 }
 

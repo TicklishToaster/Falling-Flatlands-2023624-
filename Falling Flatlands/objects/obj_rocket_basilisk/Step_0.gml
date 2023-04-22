@@ -13,7 +13,7 @@ if (instance_exists(projectile_target)) {
 	direction = image_angle;
 	
 	// Increase the potential rotation speed of the rocket over time.
-	projectile_rotation	= clamp(projectile_rotation + (room_speed / 60 / 60), 0, projectile_rotation_max);
+	projectile_rotation	= clamp(projectile_rotation + (room_speed / 60 / 60) + rotation_offset, 0, projectile_rotation_max);
 }
 
 // Add acceleration to motion.

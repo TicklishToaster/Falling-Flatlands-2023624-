@@ -13,7 +13,7 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_faction_player","path":"objects/obj_faction_player/obj_faction_player.yy",},"propertyId":{"name":"knockback_take","path":"objects/obj_faction_player/obj_faction_player.yy",},"value":"0.50",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_faction_player","path":"objects/obj_faction_player/obj_faction_player.yy",},"propertyId":{"name":"knockback_take","path":"objects/obj_faction_player/obj_faction_player.yy",},"value":"0.25",},
   ],
   "parent": {
     "name": "Faction Player",

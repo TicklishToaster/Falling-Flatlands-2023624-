@@ -228,8 +228,9 @@ if (input_space_hold) {
 				projectile_damage			= 3;
 				knockback_send				= 2;
 				projectile_speed_max		= 5.0;
-				projectile_rotation_max		= 3.0*2;
+				projectile_rotation_max		= 3.0*1;
 				projectile_acceleration		= 0.03*2;
+				rotation_offset				= 1.5;
 				projectile_sprite_id	= other.projectile_sprite_id;
 				projectile_sprite_frame	= other.rocket_type-1;
 				projectile_sprite_speed	= other.projectile_sprite_speed;
@@ -258,7 +259,7 @@ if (input_space_hold) {
 					if (other.homing_enabled) {projectile_target = other.temp_target;}
 					rocket_type				= 3;
 					projectile_hp			= other.projectile_hp;
-					projectile_damage			= 1;
+					projectile_damage			= 2;
 					knockback_send				= 1;
 					projectile_speed_max		= 5.0;
 					projectile_rotation_max		= 3.0;
