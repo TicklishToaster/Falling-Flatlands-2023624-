@@ -131,22 +131,11 @@ if (bbox_right >= room_width) {
 
 // Lose Condition /////////////////////////////////////////////////////////////
 if (health_points <= 0) {
-    // code here
+    // Play level exit audio clips.
 	audio_play_sound(SFX__FTL____Enemy_Destroy__A_, 10, false);
-	//obj_menu.instance_layer_activation = true;
-	//instance_activate_object(obj_faction);
-	//instance_activate_object(obj_projectile);
-	//instance_activate_object(obj_swarmer_drone);
-	//Camera.x = obj_menu.camera_last_x;
-	//Camera.y = obj_menu.camera_last_y;		
-	
-	// Play level exit audio clips.
-	//audio_play_sound(UI__ITB____Selection_Confirm, 10, false, 0.5);
 	audio_play_sound(UI__FTL____Level_Exit, 10, false, 0.5);
 	obj_menu.menu_active = true;
-	//temp_selected = false;
-	room_goto(rm_start);	
-	
+	room_goto(rm_start);
 }
 
 
