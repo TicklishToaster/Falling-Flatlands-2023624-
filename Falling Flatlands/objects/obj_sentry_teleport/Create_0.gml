@@ -12,7 +12,7 @@ teleport_y = 0;
 teleport_cooldown			= true;
 teleport_cooldown_timer_max	= 8.0;
 teleport_cooldown_timer		= teleport_cooldown_timer_max;
-teleport_fired				= false;
+teleport_fired				= true;
 teleport_ring				= false
 
 
