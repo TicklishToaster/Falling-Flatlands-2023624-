@@ -1,6 +1,7 @@
 
 
 randomize();
+window_set_caption("Falling Flatlands")
 audio_master_gain(0.5);
 //instance_layer_activation = true;
 

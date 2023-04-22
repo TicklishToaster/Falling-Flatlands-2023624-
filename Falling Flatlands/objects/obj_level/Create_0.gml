@@ -1,8 +1,8 @@
 score = 0;
 lives = 3;
 
-// Time Modifier for slow-mo effects. Develop Later.
-global.time_modifier = 1;
+//// Time Modifier for slow-mo effects. Develop Later.
+//global.time_modifier = 1;
 
 //draw_set_font(fnt_text);
 //audio_master_gain(0.5);
@@ -17,8 +17,8 @@ enum factions {
 }
 
 
-show_debug_overlay(true)
-window_set_caption("Falling Flatlands")
+//show_debug_overlay(true)
+//window_set_caption("Falling Flatlands")
 //instance_create_layer(x, y, "Backgrounds_1", obj_background);
 
 

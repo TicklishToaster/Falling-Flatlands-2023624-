@@ -190,12 +190,12 @@ if (ship_selection_boxes[0].selected == true) {
 if (ship_selection_boxes[1].selected == true) {
 	var string_info_1 = "- TANK VESSEL";
 	var string_info_2 = "\n- LARGE HP POOL \n- POWERFUL CANNON \n- PIERCING BULLETS";
-	var string_info_3 = "\n\n\n\n- SLOW MOVEMENT \n- SLOW RATE OF FIRE";
+	var string_info_3 = "\n\n\n\n- SLOW MOVEMENT \n- SLOW RATE OF FIRE \n- SLOW SHIELD RECHARGE";
 }
 if (ship_selection_boxes[2].selected == true) {
-	var string_info_1 = "- ROCKET VESSEL \n- FLIGHT-BASED MOVEMENT";
-	var string_info_2 = "\n\n- CAN SWITCH BETWEEN 3 ROCKET TYPES: \n	BLAST ROCKET (FAST)\n	HOMING ROCKET (ACCURATE) \n	MULTI ROCKET (RANDOM)";
-	var string_info_3 = "\n\n\n\n\n\n\n- DIFFICULT COMBAT USEABILITY";
+	var string_info_1 = "- ROCKET VESSEL"
+	var string_info_2 = "\n- CAN SWITCH BETWEEN 3 ROCKET TYPES: \n - BLAST ROCKET (FAST)\n - HOMING ROCKET (ACCURATE) \n - MULTI ROCKET (RANDOM)";
+	var string_info_3 = "\n\n\n\n\n\n- POOR SHIELD CAPACITY";
 }
 if (ship_selection_boxes[3].selected == true) {
 	var string_info_1 = "- RAMMING VESSEL";

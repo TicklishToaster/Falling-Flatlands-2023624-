@@ -144,11 +144,6 @@ if (condition_win_portal) {
 			var exit_y = cell_y * level_cell_size + (level_cell_size/2);
 		
 			var objective_object = instance_create_layer(exit_x, exit_y, "Instances", obj_exit_portal);
-			//array_push(objective_list, [objective_object, c_blue, false]);
-		
-			//show_debug_message(cell_x+1)
-			//show_debug_message(cell_y+1)
-			//show_debug_message("")
 		}
 	}
 }
@@ -193,11 +188,6 @@ if (condition_win_key) {
 		
 				var objective_object = instance_create_layer(exit_x, exit_y, "Instances", obj_key);
 				array_push(condition_key_list, objective_object);			
-			
-				//show_debug_message("Key")
-				//show_debug_message(cell_x+1)
-				//show_debug_message(cell_y+1)
-				//show_debug_message("")
 			}
 		}
 	}

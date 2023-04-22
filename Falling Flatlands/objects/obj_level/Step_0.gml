@@ -32,20 +32,8 @@ for (var grid_y = 0; grid_y < level_grid_size; grid_y += 1) {
 					if (grid_cell[3] == false) {
 						grid_cell[3] = true;
 						ds_grid_set(level_grid, grid_x+i2, grid_y+i1, grid_cell);
-						
-						show_debug_message(level_id)
 						var entity_quantity = irandom_range(enemy_density[level_id+1][0], enemy_density[level_id+1][1]);
-						//var entity_quantity = irandom_range(1, 2);
-						//var entity_quantity = 1
-						//var entity_quantity = 0;
-						for (var i = 0; i < entity_quantity; i += 1) {
-							//var entity_type = choose(obj_sentry, obj_hunter_mk1, obj_hunter_mk2, obj_hunter_mk3);
-							//var entity_type = choose(obj_sentry, obj_charger_mk2, obj_hunter_mk3);
-							//var entity_type = choose(obj_swarmer_mk1, obj_swarmer_mk2);
-							//var entity_type = obj_swarmer_mk1;
-							//var entity_type = choose(obj_hunter_mk1, obj_hunter_mk2, obj_hunter_mk3, obj_sentry_cannon, obj_sentry_teleport,
-							//	obj_charger_mk1, obj_charger_mk2, obj_charger_mk3, obj_swarmer_mk1, obj_swarmer_mk2, obj_swarmer_mk3);
-								
+						for (var i = 0; i < entity_quantity; i += 1) {								
 							var entity_type = random_weighted(
 								enemy_pool[0 ][level_id+1], 
 								enemy_pool[1 ][level_id+1], 
@@ -61,13 +49,9 @@ for (var grid_y = 0; grid_y < level_grid_size; grid_y += 1) {
 							);
 							
 							var entity_id = enemy_pool[entity_type][0];
-							//enemy_pool
-							
 							var entity_dimensions = sprite_get_width(object_get_sprite(entity_id))/2;
-							
 							var entity_x = irandom_range(grid_cell[0][0]+entity_dimensions, grid_cell[0][2]-entity_dimensions);
 							var entity_y = irandom_range(grid_cell[0][1]+entity_dimensions, grid_cell[0][3]-entity_dimensions);
-							
 							
 							// Ensure the spawn position does not overlap with an existing object.
 							while (collision_rectangle(
