@@ -8,10 +8,12 @@ if (!point_in_rectangle(x, y, Camera.border_x1, Camera.border_y1, Camera.border_
 }
 
 
+//// Attack the player when in engagement range and no allied objects are obstructing l.o.s.
+//if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement_range && 
+//	collision_line(x, y, obj_faction_player.x, obj_faction_player.y, obj_faction_enemy, true, true) == noone) 
+//	{
 // Attack the player when in engagement range.
-if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement_range && 
-	collision_line(x, y, obj_faction_player.x, obj_faction_player.y, obj_faction_enemy, true, true) == noone) 
-	{
+if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagement_range) {
 	// Determine the angle required to face the target ship.
 	var new_angle = point_direction(x, y, obj_faction_player.x, obj_faction_player.y);
 	
