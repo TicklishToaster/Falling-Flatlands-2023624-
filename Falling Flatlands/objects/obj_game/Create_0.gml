@@ -1,27 +1,14 @@
-score = 0;
-lives = 3;
 
-// Time Modifier for slow-mo effects. Develop Later.
-global.time_modifier = 1;
-
-draw_set_font(fnt_text);
-audio_master_gain(0.5);
 
 randomize();
+audio_master_gain(0.5);
+//instance_layer_activation = true;
 
-enum factions {
-	player,
-	ally,
-	neutral,
-	enemy
-}
+selected_ship_id	= noone;
+selected_level_id	= -1;
+target_level_condition_data	= [];
+target_level_enemy_pool		= [];
+target_level_enemy_density	= [];
 
-
-
-//level_grid	= ds_grid_create(10, 10);
-//level_grid_size	= 10;
-//level_cell_size	= Camera.camera_width;
-
-//room_height = level_grid_size * level_cell_size;
-//room_width	= level_grid_size * level_cell_size;
-
+instance_create_layer(x, y, "Instances", Camera);
+instance_create_layer(x, y, "Menu", obj_menu);
