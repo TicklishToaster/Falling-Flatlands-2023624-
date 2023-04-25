@@ -50,7 +50,8 @@ if (!teleport_cooldown) {
 	x = teleport_x;
 	y = teleport_y;
 	
-	// Play shoot audio.
+	// Play teleport audio.
+	audio_stop_sound(SFX__FTL____Enemy_Teleport);	
 	audio_play_sound(SFX__FTL____Enemy_Teleport, 10, false, 0.5);	
 }
 
@@ -79,12 +80,16 @@ if (!attack_cooldown && !teleport_fired) {
 		}
 	}
 	
+	audio_stop_sound(SFX__FTL____Energy_Shot_Heavy__A_);
+	audio_stop_sound(SFX__FTL____Energy_Shot_Heavy__B_);
+	audio_stop_sound(SFX__FTL____Energy_Shot_Heavy__C_);
+	
 	// Play shoot audio.
 	audio_play_sound(choose(
 	SFX__FTL____Energy_Shot_Heavy__A_,
 	SFX__FTL____Energy_Shot_Heavy__B_,
 	SFX__FTL____Energy_Shot_Heavy__C_), 
-	10, false);
+	10, false, 0.7);
 }
 
 

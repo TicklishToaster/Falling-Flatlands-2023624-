@@ -44,13 +44,18 @@ if (point_distance(x, y, obj_faction_player.x, obj_faction_player.y) < engagemen
 			direction				= projectile_direction;
 			depth					= other.depth + 1;
 		}
+		
+		
+		audio_stop_sound(SFX__FTL____Energy_Shot_Heavy__A_);
+		audio_stop_sound(SFX__FTL____Energy_Shot_Heavy__B_);
+		audio_stop_sound(SFX__FTL____Energy_Shot_Heavy__C_);		
 
 		// Play shoot audio.
 		audio_play_sound(choose(
 		SFX__FTL____Energy_Shot_Heavy__A_,
 		SFX__FTL____Energy_Shot_Heavy__B_,
 		SFX__FTL____Energy_Shot_Heavy__C_), 
-		10, false);
+		10, false, 0.7);
 	
 		// Enable attack cooldown.
 		attack_cooldown = true;
