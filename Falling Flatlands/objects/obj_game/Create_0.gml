@@ -11,5 +11,5 @@ target_level_condition_data	= [];
 target_level_enemy_pool		= [];
 target_level_enemy_density	= [];
 
-instance_create_layer(x, y, "Instances", Camera);
-instance_create_layer(x, y, "Menu", obj_menu);
+//instance_create_layer(x, y+32, "Instances", Camera);
+//instance_create_layer(x, y+64, "Menu", obj_menu);

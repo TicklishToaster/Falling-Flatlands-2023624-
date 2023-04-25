@@ -155,9 +155,11 @@ if (condition_win_key) {
 		var cell_x = irandom_range(1, level_grid_size-1-1);
 		var cell_y = irandom_range(1, level_grid_size-1-1);
 		var loop_exit = false;
+		var loop_count = 0;
 
 		// Ensure the exit cell has a valid placement.
 		while (loop_exit == false) {
+			loop_count += 1;
 			loop_exit = true;
 			// Determine if the player spawn cell is within a 2 cell radius of the target cell.
 			for (var grid_y = -2; grid_y < 3; grid_y += 1) {
@@ -177,7 +179,7 @@ if (condition_win_key) {
 			}
 	
 			// If the target cell is not near or in the player spawn cell.
-			if (loop_exit == true) {
+			if (loop_exit == true || loop_count >= 128) {
 				// Copy the cell so all its data can be overwritten/expanded.
 				var grid_cell = ds_grid_get(level_grid, cell_x, cell_y);
 				grid_cell[5] = "Key";

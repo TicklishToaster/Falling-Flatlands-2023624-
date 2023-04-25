@@ -39,7 +39,7 @@ level_enemy_data_density = [
 	[2, 3], // Lvl 17	Elite Hunters & Swarmers
 	[2, 5], // Lvl 18	Triple Threat
 	[2, 4], // Lvl 19	Swarmers & Sentries
-	[2, 6], // Lvl 20	//Sentry Minefield//
+	[2, 5], // Lvl 20	//Sentry Minefield//
 	[2, 4], // Lvl 21	Minefield Sweepers
 	[2, 5], // Lvl 22	Target Saturation (Hunters & Chargers)
 	[2, 5], // Lvl 23	Target Saturation (Chargers & Swarmers)
@@ -69,7 +69,7 @@ level_data_conditions = [
 	[10,			false,	true,	true,	false,		03,		48,		[2, 3]], // Lvl 17	Elite Hunters & Swarmers
 	[10,			true,	false,	true,	true,		00,		64,		[2, 5]], // Lvl 18	Triple Threat
 	[10,			true,	false,	false,	false,		00,		00,		[2, 4]], // Lvl 19	Swarmers & Sentries
-	[10,			true,	true,	false,	true,		05,		00,		[5, 7]], // Lvl 20	//Sentry Minefield//
+	[10,			true,	true,	false,	true,		04,		00,		[5, 7]], // Lvl 20	//Sentry Minefield//
 	[10,			true,	true,	false,	true,		03,		00,		[2, 4]], // Lvl 21	Minefield Sweepers
 	[10,			false,	false,	true,	false,		00,		96,		[2, 5]], // Lvl 22	Target Saturation (Hunters & Chargers)
 	[10,			false,	false,	true,	false,		00,		96,		[2, 5]], // Lvl 23	Target Saturation (Chargers & Swarmers)
@@ -102,7 +102,7 @@ level_data_condition_descriptions = [
 	["17", "Locate & Collect 3 Keys", "Destroy 48 Enemies"],
 	["18", "Locate and/or Reach the Exit Portal", "Destroy 64 Enemies"],
 	["19", "Reach the Exit Portal", ""],
-	["20", "Locate and/or Reach the Exit Portal", "Locate & Collect 5 Keys"],
+	["20", "Locate and/or Reach the Exit Portal", "Locate & Collect 4 Keys"],
 	["21", "Locate and/or Reach the Exit Portal", "Locate & Collect 3 Keys"],
 	["22", "Destroy 96 Enemies", ""],
 	["23", "Destroy 96 Enemies", ""],

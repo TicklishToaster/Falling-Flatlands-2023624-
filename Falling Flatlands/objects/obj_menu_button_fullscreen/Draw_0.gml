@@ -4,7 +4,7 @@ if (!obj_menu.menu_active) {
 }
 
 
-var box = 15;
+//var box = 15;
 var sub_img = 1;
 var text_trans = 0.6;
 if (selected || temp_selected) {

@@ -1,5 +1,5 @@
 // Exit if menu active is false.
-if (!obj_menu.menu_active) {
+if (!obj_menu.menu_active || room != rm_start) {
 	exit;
 }
 

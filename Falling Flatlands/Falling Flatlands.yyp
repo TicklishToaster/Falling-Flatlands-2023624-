@@ -263,7 +263,6 @@
     {"id":{"name":"uc_get_mouse_borders_acceleration","path":"scripts/uc_get_mouse_borders_acceleration/uc_get_mouse_borders_acceleration.yy",},},
     {"id":{"name":"vect_rev","path":"scripts/vect_rev/vect_rev.yy",},},
     {"id":{"name":"vect_to_vect2","path":"scripts/vect_to_vect2/vect_to_vect2.yy",},},
-    {"id":{"name":"rm_gameover","path":"rooms/rm_gameover/rm_gameover.yy",},},
     {"id":{"name":"uc_get_view_x","path":"scripts/uc_get_view_x/uc_get_view_x.yy",},},
     {"id":{"name":"SFX__FTL____Shield_Hit_Impact__B_","path":"sounds/SFX__FTL____Shield_Hit_Impact__B_/SFX__FTL____Shield_Hit_Impact__B_.yy",},},
     {"id":{"name":"obj_charger_mk2","path":"objects/obj_charger_mk2/obj_charger_mk2.yy",},},
@@ -394,7 +393,6 @@
     {"id":{"name":"uc_get_view_height","path":"scripts/uc_get_view_height/uc_get_view_height.yy",},},
     {"id":{"name":"uc_get_static_acceleration","path":"scripts/uc_get_static_acceleration/uc_get_static_acceleration.yy",},},
     {"id":{"name":"SFX__FTL____Energy_Shot_Impact__A_","path":"sounds/SFX__FTL____Energy_Shot_Impact__A_/SFX__FTL____Energy_Shot_Impact__A_.yy",},},
-    {"id":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
     {"id":{"name":"uc_get_mouse_drag_button","path":"scripts/uc_get_mouse_drag_button/uc_get_mouse_drag_button.yy",},},
     {"id":{"name":"vect2","path":"scripts/vect2/vect2.yy",},},
     {"id":{"name":"SFX__FTL____Enemy_Swarmer_Impact__B_","path":"sounds/SFX__FTL____Enemy_Swarmer_Impact__B_/SFX__FTL____Enemy_Swarmer_Impact__B_.yy",},},
@@ -422,8 +420,6 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
-    {"roomId":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
-    {"roomId":{"name":"rm_gameover","path":"rooms/rm_gameover/rm_gameover.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

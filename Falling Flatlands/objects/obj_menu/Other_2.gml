@@ -64,7 +64,7 @@ instance_create_layer(offset_x, offset_y, "Menu", obj_menu_button_exit,
 
 
 
-// Create Controls Box
+// Create Fullscreen Box
 var offset_x	= uc_get_view_x() + (box*0 + 1)*4 + (box/2)*4;
 var offset_y	= uc_get_view_y() + (box*4 + 1)*4 + (box/2)*4;
 var box_w		= (box*1 - 1)*4;
