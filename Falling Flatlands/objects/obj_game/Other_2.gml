@@ -14,6 +14,7 @@ level_enemy_data_pool = [
 	[obj_sentry_cannon,		05, 10, 00, 05, 00, 00, 00, 00, 10, 00, 00, 00, 00, 05, 20, 00, 00, 00, 20, 80, 00, 10, 10, 10, 20],
 	[obj_sentry_teleport,	00, 00, 00, 00, 00, 10, 10, 00, 60, 00, 00, 00, 20, 05, 10, 00, 00, 00, 00, 10, 60, 00, 00, 00, 10]
 	// ENEMY FREQUENCY		1-2	0-3	0-2	1-2	1-3	1-2	1-1	2-3	2-3	1-2	2-4	2-4	3-3	2-3	3-3	2-3	2-3	2-5	2-4	5-7	2-4	2-5	2-5	1-4	7-7]
+	// ENEMY FREQUENCY		1-2	0-3	0-2	1-2	1-3	1-2	1-1	2-3	1-3	1-2	2-4	2-4	3-3	2-3	3-3	2-3	2-3	2-5	2-4	5-7	2-4	2-5	2-5	1-4	7-7]
 ];
 
 level_enemy_data_density = [
@@ -27,18 +28,18 @@ level_enemy_data_density = [
 	[1, 2], // Lvl 06	Swarmer Introduction
 	[1, 1], // Lvl 07	Swarmer Heavy
 	[2, 3], // Lvl 08	Hunters & Swarmers
-	[2, 3], // Lvl 09	Teleporting Sentries
+	[1, 3], // Lvl 09	Teleporting Sentries
 	[1, 2], // Lvl 10	//Elites Only//
-	[2, 4], // Lvl 11	Hunters Only
-	[2, 4], // Lvl 12	Chargers Only
-	[3, 3], // Lvl 13	Swarmers & Teleporters
+	[1, 4], // Lvl 11	Hunters Only
+	[1, 4], // Lvl 12	Chargers Only
+	[2, 3], // Lvl 13	Swarmers & Teleporters
 	[2, 3], // Lvl 14	Mixed Nuts
-	[3, 4], // Lvl 15	//Everyone Is Here//
+	[2, 4], // Lvl 15	//Everyone Is Here//
 	[2, 3], // Lvl 16	Chargers & Swarmers
 	[2, 3], // Lvl 17	Elite Hunters & Swarmers
 	[2, 5], // Lvl 18	Triple Threat
 	[2, 4], // Lvl 19	Swarmers & Sentries
-	[5, 7], // Lvl 20	//Sentry Minefield//
+	[2, 6], // Lvl 20	//Sentry Minefield//
 	[2, 4], // Lvl 21	Minefield Sweepers
 	[2, 5], // Lvl 22	Target Saturation (Hunters & Chargers)
 	[2, 5], // Lvl 23	Target Saturation (Chargers & Swarmers)
