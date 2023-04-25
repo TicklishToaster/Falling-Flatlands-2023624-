@@ -63,6 +63,15 @@ instance_create_layer(offset_x, offset_y, "Menu", obj_menu_button_exit,
 	{box_width : box_w, box_height : box_h});
 
 
+
+// Create Controls Box
+var offset_x	= uc_get_view_x() + (box*0 + 1)*4 + (box/2)*4;
+var offset_y	= uc_get_view_y() + (box*4 + 1)*4 + (box/2)*4;
+var box_w		= (box*1 - 1)*4;
+var box_h		= (box*1 - 1)*4;
+instance_create_layer(offset_x, offset_y, "Menu", obj_menu_button_fullscreen, 
+	{box_width : box_w, box_height : box_h});
+
 // Create Controls Box
 var offset_x	= uc_get_view_x() + (box*0 + 1)*4 + (box/2)*4;
 var offset_y	= uc_get_view_y() + (box*5 + 1)*4 + (box/2)*4;
@@ -70,8 +79,6 @@ var box_w		= (box*1 - 1)*4;
 var box_h		= (box*1 - 1)*4;
 instance_create_layer(offset_x, offset_y, "Menu", obj_menu_button_controls, 
 	{box_width : box_w, box_height : box_h});
-//draw_sprite_stretched(spr_menu_box_x4, 3, offset_x, offset_y, box_w, box_h);
-//draw_sprite_ext(spr_menu_icon_controls, 0, offset_x + box_w/2, offset_y + box_h/2, 4, 4, 0, -1, 1);
 
 // Create Audio Box
 var offset_x	= uc_get_view_x() + (box*0 + 1)*4 + (box/2)*4;
@@ -80,8 +87,6 @@ var box_w		= (box*1 - 1)*4;
 var box_h		= (box*1 - 1)*4;
 instance_create_layer(offset_x, offset_y, "Menu", obj_menu_button_audio, 
 	{box_width : box_w, box_height : box_h});
-//draw_sprite_stretched(spr_menu_box_x4, 3, offset_x, offset_y, box_w, box_h);
-//draw_sprite_ext(spr_menu_icon_audio, 3, offset_x + box_w/2, offset_y + box_h/2, 4, 4, 0, -1, 1);
 
 // Create Quit Box
 var offset_x	= uc_get_view_x() + (box*0 + 1)*4 + (box/2)*4;
@@ -90,6 +95,4 @@ var box_w		= (box*1 - 1)*4;
 var box_h		= (box*1 - 1)*4;
 instance_create_layer(offset_x, offset_y, "Menu", obj_menu_button_quit, 
 	{box_width : box_w, box_height : box_h});
-//draw_sprite_stretched(spr_menu_box_x4, 3, offset_x, offset_y, box_w, box_h);
-//draw_sprite_ext(spr_menu_icon_quit, 0, offset_x + box_w/2, offset_y + box_h/2, 4, 4, 0, -1, 1);
 

@@ -5,7 +5,6 @@
 // ==============================================================
 #region Set all the camera main parameters
 
-window_set_fullscreen(false);
 // view_width --> Width of the portion of room we will be seeing
 // view_height --> Height of the portion of the room we will be seeing
 
